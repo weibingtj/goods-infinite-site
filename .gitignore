@@ -1,0 +1,17 @@
+# Secrets — NEVER commit
+.deploy.env
+.secrets
+*.token
+
+# Deploy artifacts
+*.zip
+__pycache__/
+node_modules/
+.wrangler/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local preview server logs
+*.log

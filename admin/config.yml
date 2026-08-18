@@ -1,0 +1,57 @@
+# Decap CMS configuration (formerly Netlify CMS)
+# Docs: https://decapcms.org/docs/configuration-options/
+#
+# HOW TO GO LIVE (one-time):
+# 1. Push this site to a GitHub repo (replace repo: below with your real one).
+# 2. Connect that repo to Cloudflare Pages; build command:  python build_insights.py
+#    build output directory:  .   (repo root). This auto-runs on every git push.
+# 3. Create a GitHub OAuth App:
+#      Homepage URL = https://www.goods-infinite.com
+#      Authorization callback URL = https://www.goods-infinite.com/api/auth/callback
+# 4. In Cloudflare Pages -> Settings -> Environment variables, add:
+#      GITHUB_CLIENT_ID   = (from the OAuth App)
+#      GITHUB_CLIENT_SECRET = (from the OAuth App)
+# 5. (Optional but recommended) Put /admin behind Cloudflare Access so the login
+#    page is not public. Pages settings -> Access -> add policy for path /admin*.
+# 6. Visit https://www.goods-infinite.com/admin/ and click "Login with GitHub".
+#
+# The OAuth handshake is handled by functions/api/auth.js + auth/callback.js
+# (Cloudflare Pages Functions) — no separate server needed.
+#
+# LOCAL PREVIEW (optional): run `npx decap-server` in this folder, then open
+# /admin/ with local_backend enabled below.
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/goods-infinite-site   # <-- REPLACE with your real GitHub repo (e.g. weibingtj/goods-infinite-site)
+  branch: main
+  base_url: https://www.goods-infinite.com          # domain that hosts /api/auth (same as site)
+  auth_endpoint: /api/auth
+  site_url: https://www.goods-infinite.com
+
+local_backend: false
+
+# Media (images) uploaded in the editor land here; referenced as /assets/images/...
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "insights"
+    label: "Insights / GEO Articles"
+    label_singular: "Insight article"
+    folder: "content/insights"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: "Title", widget: string }
+      - { name: date, label: "Publish date", widget: datetime, default: "{{now}}", format: "YYYY-MM-DD", required: false }
+      - { name: excerpt, label: "Excerpt (meta description)", widget: string }
+      - { name: cluster, label: "Cluster / tag", widget: select, options: [ "Entry", "1210", "Import Agent", "Compliance", "Sourcing" ] }
+      - name: faq
+        label: "FAQ (powers FAQPage schema for GEO)"
+        widget: list
+        required: false
+        fields:
+          - { name: q, label: "Question", widget: string }
+          - { name: a, label: "Answer", widget: text }
+      - { name: body, label: "Body (Markdown)", widget: markdown, hint: "Use ## / ### headings, **bold**, lists, and raw <table> HTML for comparisons." }

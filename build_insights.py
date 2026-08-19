@@ -30,6 +30,29 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 SITE = "https://www.goods-infinite.com"
 
+# Author (E-E-A-T). Add LinkedIn etc. to SAMEAS for stronger entity signals.
+AUTHOR = {
+    "name": "Ben Wei",
+    "url": SITE + "/author-ben.html",
+    "title": "Operations Director",
+    "sameas": [],   # e.g. ["https://www.linkedin.com/in/your-handle"]
+}
+
+# Authority references rendered on every article (GEO: external citations to
+# trusted sources lift AI citation rate; Princeton study shows up to +40%).
+SOURCES_BLOCK = """
+    <div class="card sources" style="margin-top:32px">
+      <h2>Regulatory authorities referenced</h2>
+      <ul>
+        <li><a href="https://www.customs.gov.cn" target="_blank" rel="nofollow noopener">General Administration of Customs of China (GACC)</a></li>
+        <li><a href="https://www.mofcom.gov.cn" target="_blank" rel="nofollow noopener">Ministry of Commerce (MOFCOM)</a></li>
+        <li><a href="https://www.samr.gov.cn" target="_blank" rel="nofollow noopener">State Administration for Market Regulation (SAMR)</a></li>
+        <li><a href="https://www.nmpa.gov.cn" target="_blank" rel="nofollow noopener">National Medical Products Administration (NMPA)</a></li>
+        <li><a href="https://www.chinatax.gov.cn" target="_blank" rel="nofollow noopener">State Taxation Administration (STA)</a></li>
+      </ul>
+    </div>
+"""
+
 NAV = """
 <header class="nav">
   <div class="container nav-inner">
@@ -181,13 +204,25 @@ def build_article(meta, body, slug):
                             "acceptedAnswer": {"@type": "Answer", "text": q['a']}}
                            for q in faq if 'q' in q and 'a' in q]
         }, ensure_ascii=False, indent=2) + '\n</script>')
+    author_ld = {
+        "@type": "Person",
+        "name": AUTHOR["name"],
+        "url": AUTHOR["url"],
+        "jobTitle": AUTHOR["title"],
+        "worksFor": {"@type": "Organization",
+                     "name": "GOODSINFINITE TRADE LIMITED",
+                     "url": SITE + "/"}
+    }
+    if AUTHOR["sameas"]:
+        author_ld["sameAs"] = AUTHOR["sameas"]
     article_ld = ('<script type="application/ld+json">\n' + json.dumps({
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": title,
         "description": excerpt,
         "datePublished": date,
-        "author": {"@type": "Organization", "name": "GOODSINFINITE TRADE LIMITED"},
+        "dateModified": date,
+        "author": author_ld,
         "publisher": {"@type": "Organization", "name": "GOODSINFINITE TRADE LIMITED",
                       "url": SITE + "/"},
         "mainEntityOfPage": SITE + "/insights/" + slug + ".html",
@@ -214,14 +249,14 @@ def build_article(meta, body, slug):
     <p class="crumbs"><a href="index.html">Insights</a> / {html.escape(cluster)}</p>
     <h1>{html.escape(title)}</h1>
     <p class="lead">{html.escape(excerpt)}</p>
-    <p class="muted">Published {html.escape(date)} · GOODSINFINITE TRADE LIMITED</p>
+    <p class="muted">Published {html.escape(date)} · Last updated {html.escape(date)} · By <a href="../author-ben.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
   </div>
 </section>
 <section>
   <div class="container">
     <article class="article">
 {body_html}
-    </article>
+    </article>{SOURCES_BLOCK}
     <div class="ctaband" style="margin-top:40px">
       <h2>Talk to our China entry team</h2>
       <p>Have a question about your product's path into China? Book a free 30-minute call.</p>

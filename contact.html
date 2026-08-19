@@ -145,6 +145,16 @@
           note.textContent = 'Thanks — your request is sent. We will reply to ' + (data.get('email') || 'your email') + ' within 1 business day.';
           note.style.display = 'block';
           form.reset();
+          // GA4 conversion: track a qualified inquiry (lead)
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              currency: 'USD',
+              value: 1,
+              product_category: data.get('category') || undefined,
+              country: data.get('country') || undefined,
+              stage: data.get('stage') || undefined
+            });
+          }
         } else {
           throw new Error(json.message || 'Submission failed');
         }

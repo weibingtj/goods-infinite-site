@@ -47,3 +47,11 @@ The Cloudflare login password appeared in chat. **Change it now.** For ongoing w
 ## Before going live
 - `Case 02` in `case-studies.html` is still an *Illustrative* (sample) story — replace with a real authorized client (preferably a cosmetics brand, per Ben's content decision) before publishing.
 - `admin/config.yml` still has a placeholder GitHub `repo:` — replace with your real repo before enabling the CMS backend.
+
+## Enable browser-based CMS (Decap) — see SETUP-CMS.md
+The local git repo is already initialized and committed (branch `main`, 60 files, secrets excluded).
+To let Ben write/edit Insights articles from a browser:
+- `functions/api/auth.js` + `functions/api/auth/callback.js` = GitHub OAuth proxy (Cloudflare Pages Functions, no separate server).
+- Full click-by-click recipe (GitHub repo → connect Pages → OAuth App → env vars → optional Cloudflare Access): **SETUP-CMS.md**.
+- Switching from Direct Upload to Git-connected Pages keeps the custom domain/SSL; every `git push` auto-rebuilds.
+- Only remaining manual steps for Ben: create the GitHub repo, `git remote add` + `git push`, create the OAuth App, paste keys into Pages env vars.

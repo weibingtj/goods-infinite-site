@@ -33,23 +33,36 @@
 
 ---
 
-## 步骤 2：把本地代码 push 上去
-本地仓库已经 `git init -b main` 并提交好了。你只需加 remote 并推送：
+## 步骤 2：把本地代码 push 上去（二选一）
+
+你本地仓库已经 `git init`、提交好、并且 `origin` 已指向 `https://github.com/weibingtj/goods-infinite-site.git`，只差最后一步 push。
+
+### 方案 A：把 PAT 发给 Jarvis，我帮你推（最快，30 秒）
+1. 在 GitHub 生成一个临时 PAT：
+   - 打开 https://github.com/settings/tokens/new （ classic token ）
+   - **Note** 填 `goods-infinite-site-push`
+   - **Expiration** 选 `7 days`（用完就删，安全）
+   - **Select scopes** 勾 `repo`（会全选 repo 下 4 项）
+   - 点最下方 **Generate token**
+   - **立刻复制**那一串 `ghp_xxxxxxxx`（只显示一次）
+2. 把 PAT 发给我（这条消息我处理完你就可以在 GitHub 删了它）。
+3. 我执行 `git push`，推完告诉你，你再去 GitHub 删 token。
+
+### 方案 B：你自己在终端推
+在你电脑按 `Win + R`，输入 `cmd` 回车，然后复制粘贴：
 
 ```bash
-cd goodsinfinite
-git remote add origin https://github.com/你的用户名/goods-infinite-site.git
-git branch -M main
+cd E:\workbuddy\2026-08-18-12-10-21\goodsinfinite
 git push -u origin main
 ```
 
-推送时需要 GitHub 身份。推荐用 **Personal Access Token（PAT）** 当密码：
-- GitHub → 右上角头像 → Settings → Developer settings → **Personal access tokens → Tokens (classic)**
-- **Generate new token (classic)**，勾 `repo`（全选 repo 权限），过期设长一点（如 90 天/无过期按需）
-- 生成后**复制保存**（只显示一次）
-- `git push` 用户名填 GitHub 账号，密码处**粘贴这个 PAT**（不是登录密码）
+然后会弹窗让你登录 GitHub；如果让你输用户名/密码：
+- **Username**：`weibingtj`
+- **Password**：粘贴你的 PAT（不是 GitHub 登录密码）
 
-> 若提示 `remote already exists`，说明已经加过，跳过 `git remote add` 那行即可。
+如果你还没有 PAT，按方案 A 的第 1 步生成一个。
+
+> 注意：GitHub 从 2021 年起**禁止用登录密码**推代码，必须用 PAT。
 
 ---
 

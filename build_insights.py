@@ -13,6 +13,17 @@ import re, json, html, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+
+# GA4 snippet (kept as a plain string so it can sit inside f-strings safely)
+GA_SNIPPET = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-68HRE7BJFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-68HRE7BJFK');
+</script>
+"""
 SRC = ROOT / "content" / "insights"
 OUT = ROOT / "insights"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -195,7 +206,7 @@ def build_article(meta, body, slug):
   <link rel="stylesheet" href="../assets/css/style.css">
 {article_ld}
 {faq_ld}
-</head>
+{GA_SNIPPET}</head>
 <body>
 {NAV}
 <section class="pagehero">
@@ -247,7 +258,7 @@ def build_index(articles):
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"CollectionPage","name":"GOODSINFINITE Insights","url":"{SITE}/insights/index.html"}}
 </script>
-</head>
+{GA_SNIPPET}</head>
 <body>
 {NAV}
 <section class="pagehero">

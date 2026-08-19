@@ -11,6 +11,8 @@
   <url><loc>https://www.goods-infinite.com/about.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.goods-infinite.com/author-ben.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.goods-infinite.com/contact.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.goods-infinite.com/guide-china-market-entry.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.goods-infinite.com/glossary.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.goods-infinite.com/insights/index.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.goods-infinite.com/insights/what-is-1210-bonded-import.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.goods-infinite.com/insights/1210-vs-9610-vs-0110.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -27,4 +29,7 @@
   <url><loc>https://www.goods-infinite.com/insights/china-trademark-registration-foreign-brand.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.goods-infinite.com/insights/tmall-global-store-setup.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.goods-infinite.com/insights/wfoe-china-import-setup.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.goods-infinite.com/insights/wfoe-vs-representative-office.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.goods-infinite.com/insights/1210-bonded-vs-direct-mail.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.goods-infinite.com/insights/tmall-global-vs-jd-worldwide-vs-douyin.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

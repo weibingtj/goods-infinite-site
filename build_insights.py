@@ -64,6 +64,8 @@ NAV = """
       <a href="../china-marketing.html">China Marketing</a>
       <a href="../source-from-china.html">Source from China</a>
       <a href="index.html">Insights</a>
+      <a href="../guide-china-market-entry.html">Guide</a>
+      <a href="../glossary.html">Glossary</a>
       <a href="../pricing.html">Pricing</a>
       <a href="../about.html">About</a>
       <a href="../contact.html" class="btn">Contact</a>
@@ -204,6 +206,18 @@ def build_article(meta, body, slug):
                             "acceptedAnswer": {"@type": "Answer", "text": q['a']}}
                            for q in faq if 'q' in q and 'a' in q]
         }, ensure_ascii=False, indent=2) + '\n</script>')
+    breadcrumb_ld = ('<script type="application/ld+json">\n' + json.dumps({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home",
+             "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Insights",
+             "item": SITE + "/insights/index.html"},
+            {"@type": "ListItem", "position": 3, "name": title,
+             "item": SITE + "/insights/" + slug + ".html"}
+        ]
+    }, ensure_ascii=False, indent=2) + '\n</script>')
     author_ld = {
         "@type": "Person",
         "name": AUTHOR["name"],
@@ -239,6 +253,7 @@ def build_article(meta, body, slug):
 <link rel="canonical" href="{SITE}/insights/{slug}.html">
 <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
+{breadcrumb_ld}
 {article_ld}
 {faq_ld}
 {GA_SNIPPET}</head>
@@ -246,7 +261,7 @@ def build_article(meta, body, slug):
 {NAV}
 <section class="pagehero">
   <div class="container">
-    <p class="crumbs"><a href="index.html">Insights</a> / {html.escape(cluster)}</p>
+    <p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Insights</a> / {html.escape(cluster)}</p>
     <h1>{html.escape(title)}</h1>
     <p class="lead">{html.escape(excerpt)}</p>
     <p class="muted">Published {html.escape(date)} · Last updated {html.escape(date)} · By <a href="../author-ben.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>

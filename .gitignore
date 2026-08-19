@@ -2,6 +2,7 @@
 .deploy.env
 .secrets
 *.token
+.github_token
 
 # Deploy artifacts
 *.zip

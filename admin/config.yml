@@ -23,7 +23,7 @@
 
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/goods-infinite-site   # <-- REPLACE with your real GitHub repo (e.g. weibingtj/goods-infinite-site)
+  repo: weibingtj/goods-infinite-site              # GitHub repo (created by Ben) (e.g. weibingtj/goods-infinite-site)
   branch: main
   base_url: https://www.goods-infinite.com          # domain that hosts /api/auth (same as site)
   auth_endpoint: /api/auth

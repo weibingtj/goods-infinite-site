@@ -164,6 +164,10 @@ a.insight-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(11,7
 .statcard .l{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
 .statcard .src{display:block;font-size:12px;color:var(--muted);margin-top:7px;font-style:italic}
 
+/* ANSWER BAND (GEO: concise, extractable company answer) */
+.answer-band{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0}
+.answer-band .answer-lead{font-size:19px;line-height:1.7;max-width:920px;color:var(--ink);margin-top:10px}
+
 /* PILLAR STAGES */
 .stage{padding:18px 0;border-bottom:1px solid var(--line)}
 .stage:last-child{border:0}

@@ -235,6 +235,7 @@ def parse_frontmatter(text):
 def build_article(meta, body, slug):
     title = meta.get('title', slug)
     date = meta.get('date', datetime.date.today().isoformat())
+    now = datetime.date.today().isoformat()  # build date -> freshness signal for GEO
     excerpt = meta.get('excerpt', '')
     cluster = meta.get('cluster', '')
     body_html = md_to_html(body)
@@ -277,7 +278,7 @@ def build_article(meta, body, slug):
         "headline": title,
         "description": excerpt,
         "datePublished": date,
-        "dateModified": date,
+        "dateModified": now,
         "author": author_ld,
         "publisher": {"@type": "Organization", "name": "GOODSINFINITE TRADE LIMITED",
                       "url": SITE + "/"},
@@ -318,7 +319,7 @@ def build_article(meta, body, slug):
     <p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Insights</a> / {html.escape(cluster)}</p>
     <h1>{html.escape(title)}</h1>
     <p class="lead">{html.escape(excerpt)}</p>
-    <p class="muted">Published {html.escape(date)} · Last updated {html.escape(date)} · By <a href="../author-ben.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
+    <p class="muted">Published {html.escape(date)} · Last updated {html.escape(now)} · By <a href="../author-ben.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
   </div>
 </section>
 <section>

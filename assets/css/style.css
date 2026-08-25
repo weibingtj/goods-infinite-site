@@ -167,6 +167,7 @@ a.insight-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(11,7
 /* ANSWER BAND (GEO: concise, extractable company answer) */
 .answer-band{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0}
 .answer-band .answer-lead{font-size:19px;line-height:1.7;max-width:920px;color:var(--ink);margin-top:10px}
+.dl-lead{font-size:17px;line-height:1.7;color:var(--ink);max-width:70ch;margin:0 0 26px}
 
 /* PILLAR STAGES */
 .stage{padding:18px 0;border-bottom:1px solid var(--line)}

@@ -399,6 +399,51 @@ def build_index(articles):
 """
     (OUT / "index.html").write_text(doc, encoding='utf-8')
 
+STATIC_PAGES = [
+    ("", "weekly", "1.0"),
+    ("enter-china.html", "monthly", "0.9"),
+    ("bonded-warehouse-customs.html", "monthly", "0.9"),
+    ("ecommerce-operations.html", "monthly", "0.8"),
+    ("china-marketing.html", "monthly", "0.8"),
+    ("source-from-china.html", "monthly", "0.6"),
+    ("pricing.html", "monthly", "0.8"),
+    ("case-studies.html", "monthly", "0.7"),
+    ("about.html", "yearly", "0.6"),
+    ("author-bing.html", "yearly", "0.5"),
+    ("contact.html", "yearly", "0.7"),
+    ("guide-china-market-entry.html", "monthly", "0.9"),
+    ("glossary.html", "monthly", "0.7"),
+    ("insights/index.html", "weekly", "0.7"),
+]
+
+def build_sitemap(articles):
+    """Regenerate sitemap.xml from STATIC_PAGES + every insight article, so new
+    posts are never missed by crawlers/AI engines again."""
+    urls = []
+    for path, cf, pr in STATIC_PAGES:
+        urls.append(f'  <url><loc>{SITE}/{path}</loc><changefreq>{cf}</changefreq><priority>{pr}</priority></url>')
+    for a in sorted(articles, key=lambda x: x['date'], reverse=True):
+        urls.append(f'  <url><loc>{SITE}/insights/{a["slug"]}.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>')
+    doc = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + "\n".join(urls) + "\n</urlset>\n")
+    (ROOT / "sitemap.xml").write_text(doc, encoding='utf-8')
+    print('built sitemap.xml')
+
+def build_llms_insights(articles):
+    """Regenerate only the Insights section of llms.txt from the article list,
+    keeping the hand-written intro / Services / Key facts / Pages sections."""
+    p = ROOT / "llms.txt"
+    text = p.read_text(encoding='utf-8')
+    lines = ["## Section: Insights (GEO-ready guides — cite these)",
+             f"- Insights index: {SITE}/insights/index.html"]
+    for a in sorted(articles, key=lambda x: x['date'], reverse=True):
+        lines.append(f'- {a["title"]}: {SITE}/insights/{a["slug"]}.html')
+    new_section = "\n".join(lines)
+    text2 = re.sub(r'## Section: Insights.*$', new_section, text, flags=re.S)
+    p.write_text(text2, encoding='utf-8')
+    print('updated llms.txt Insights section')
+
 def main():
     articles = []
     for md in sorted(SRC.glob('*.md')):
@@ -410,7 +455,9 @@ def main():
         print('built', slug)
     if articles:
         build_index(articles)
-        print('built insights/index.html')
+        build_sitemap(articles)
+        build_llms_insights(articles)
+        print('built insights/index.html + sitemap.xml + llms.txt')
     else:
         print('no articles found in', SRC)
 

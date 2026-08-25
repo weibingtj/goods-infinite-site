@@ -14,5 +14,8 @@ node_modules/
 .DS_Store
 Thumbs.db
 
+# Local WorkBuddy project data (memory, automations) — NEVER commit
+.workbuddy/
+
 # Local preview server logs
 *.log

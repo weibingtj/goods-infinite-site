@@ -251,6 +251,18 @@ def build_article(meta, body, slug):
 <title>{html.escape(title)} | GOODSINFINITE Insights</title>
 <meta name="description" content="{html.escape(excerpt)}">
 <link rel="canonical" href="{SITE}/insights/{slug}.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(excerpt)}">
+<meta property="og:url" content="{SITE}/insights/{slug}.html">
+<meta property="og:image" content="{SITE}/assets/images/og-cover.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height"  content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{html.escape(title)}">
+<meta name="twitter:description" content="{html.escape(excerpt)}">
+<meta name="twitter:image" content="{SITE}/assets/images/og-cover.webp">
 <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
 {breadcrumb_ld}
@@ -304,6 +316,18 @@ def build_index(articles):
 <title>Insights — China Market Entry Guides | GOODSINFINITE</title>
 <meta name="description" content="Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance — built to be cited by search and generative AI.">
 <link rel="canonical" href="{SITE}/insights/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
+<meta property="og:title" content="Insights — China Market Entry Guides | GOODSINFINITE">
+<meta property="og:description" content="Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance — built to be cited by search and generative AI.">
+<meta property="og:url" content="{SITE}/insights/index.html">
+<meta property="og:image" content="{SITE}/assets/images/og-cover.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height"  content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Insights — China Market Entry Guides | GOODSINFINITE">
+<meta name="twitter:description" content="Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.">
+<meta name="twitter:image" content="{SITE}/assets/images/og-cover.webp">
 <link rel="stylesheet" href="../assets/css/style.css">
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"CollectionPage","name":"GOODSINFINITE Insights","url":"{SITE}/insights/index.html"}}

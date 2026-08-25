@@ -32,8 +32,8 @@ SITE = "https://www.goods-infinite.com"
 
 # Author (E-E-A-T). Add LinkedIn etc. to SAMEAS for stronger entity signals.
 AUTHOR = {
-    "name": "Ben Wei",
-    "url": SITE + "/author-ben.html",
+    "name": "Bing Wei",
+    "url": SITE + "/author-bing.html",
     "title": "Operations Director",
     "sameas": ["https://www.linkedin.com/in/bing-wei-0966283a7"],
 }
@@ -319,7 +319,7 @@ def build_article(meta, body, slug):
     <p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Insights</a> / {html.escape(cluster)}</p>
     <h1>{html.escape(title)}</h1>
     <p class="lead">{html.escape(excerpt)}</p>
-    <p class="muted">Published {html.escape(date)} · Last updated {html.escape(now)} · By <a href="../author-ben.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
+    <p class="muted">Published {html.escape(date)} · Last updated {html.escape(now)} · By <a href="../author-bing.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
   </div>
 </section>
 <section>

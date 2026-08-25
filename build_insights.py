@@ -35,7 +35,7 @@ AUTHOR = {
     "name": "Ben Wei",
     "url": SITE + "/author-ben.html",
     "title": "Operations Director",
-    "sameas": [],   # e.g. ["https://www.linkedin.com/in/your-handle"]
+    "sameas": ["https://www.linkedin.com/in/bing-wei-0966283a7"],
 }
 
 # Authority references rendered on every article (GEO: external citations to

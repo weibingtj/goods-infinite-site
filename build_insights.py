@@ -86,6 +86,48 @@ NAV = """
 </header>
 """
 
+ORG_DATA = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": SITE + "/#organization",
+            "name": "GOODSINFINITE TRADE LIMITED",
+            "alternateName": "無商國際貿易有限公司",
+            "url": SITE + "/",
+            "logo": SITE + "/assets/images/logo.svg",
+            "image": SITE + "/assets/images/og-cover.webp",
+            "description": "Hong Kong trading company that helps overseas brands enter the China market and fulfill orders inside China through bonded warehousing, 1210 cross-border import, customs clearance and China e-commerce operations.",
+            "email": "goodsinfinite@goods-infinite.com",
+            "taxID": "2972326",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Room P, 4/F, Yick Choi Centre, 72 Hoi Yuen Road",
+                "addressLocality": "Kwun Tong, Kowloon",
+                "addressRegion": "Hong Kong",
+                "addressCountry": "HK"
+            },
+            "areaServed": ["CN", "HK"],
+            "knowsAbout": ["Cross-border e-commerce", "Bonded warehousing",
+                           "Customs clearance", "1210 import model", "China market entry"],
+            "sameAs": AUTHOR.get("sameas", [])
+        },
+        {
+            "@type": "WebSite",
+            "@id": SITE + "/#website",
+            "name": "GOODSINFINITE TRADE LIMITED",
+            "url": SITE + "/",
+            "publisher": {"@id": SITE + "/#organization"},
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": SITE + "/insights/index.html",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    ]
+}
+ORG_LD = '<script type="application/ld+json">\n' + json.dumps(ORG_DATA, ensure_ascii=False, indent=2) + '\n</script>'
+
 FOOTER = """
 <footer>
   <div class="container">
@@ -98,7 +140,7 @@ FOOTER = """
     <div class="foot-bottom"><span>© 2026 GOODSINFINITE TRADE LIMITED. All rights reserved.</span><span>HK: Room P, 4/F, Yick Choi Centre, 72 Hoi Yuen Road, Kwun Tong, Kowloon, Hongkong, China · Mainland China Office: 12/F, Mass-Innovation Building, 3699 Xinhua Road, Binhai New Area, Tianjin, China</span></div>
   </div>
 </footer>
-"""
+""" + ORG_LD
 
 # ---------- markdown -> html (minimal, dependency-free) ----------
 def inline(s):

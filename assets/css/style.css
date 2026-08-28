@@ -36,7 +36,10 @@ p{margin:0 0 1em}.muted{color:var(--muted)}
 .mobile-menu.open{display:flex}
 
 /* HERO */
-.hero{background:linear-gradient(125deg,var(--brand-dark),var(--brand) 55%,var(--green));color:#fff;padding:74px 0 84px}
+.hero{position:relative;background:linear-gradient(125deg,var(--brand-dark),var(--brand) 55%,var(--green));color:#fff;padding:74px 0 84px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url("../images/hero-bg.webp") center/cover no-repeat;opacity:.92}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,22,44,.94) 0%,rgba(8,32,66,.82) 42%,rgba(9,40,80,.38) 78%,rgba(10,46,90,.15) 100%)}
+.hero .container{position:relative;z-index:1}
 .hero h1{color:#fff;max-width:18ch}
 .hero p.lead{font-size:18px;max-width:60ch;color:#eaf2ff;margin-bottom:26px}
 .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
@@ -90,6 +93,21 @@ section{padding:64px 0}
 .pagehero .crumbs{font-size:13px;color:var(--muted);margin-bottom:10px}
 .pagehero h1{margin-bottom:8px}
 .pagehero p.lead{font-size:17px;color:var(--muted);max-width:66ch}
+/* PAGE HERO with photo background (GEO: text stays real HTML over image) */
+.pagehero.has-bg{position:relative;background:var(--brand-dark);color:#fff;padding:72px 0 56px;overflow:hidden}
+.pagehero.has-bg::before{content:"";position:absolute;inset:0;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.95}
+.pagehero.has-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(7,22,44,.95) 0%,rgba(8,32,66,.85) 45%,rgba(9,40,80,.45) 80%,rgba(10,46,90,.2) 100%)}
+.pagehero.has-bg .container{position:relative;z-index:1}
+.pagehero.has-bg .crumbs{color:rgba(255,255,255,.78)}
+.pagehero.has-bg .crumbs a{color:rgba(255,255,255,.85)}
+.pagehero.has-bg h1{color:#fff}
+.pagehero.has-bg p.lead{color:rgba(234,242,255,.92)}
+.pagehero.has-bg .eyebrow{color:var(--amber-light,#f0c76a)}
+.ph-enter-china::before{background-image:url("../images/pagehero-enter-china.webp")}
+.ph-bonded::before{background-image:url("../images/pagehero-bonded.webp")}
+.ph-ecommerce::before{background-image:url("../images/pagehero-ecommerce.webp")}
+.ph-marketing::before{background-image:url("../images/pagehero-china-marketing.webp")}
+.ph-source::before{background-image:url("../images/pagehero-source.webp")}
 
 /* TABLE */
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}

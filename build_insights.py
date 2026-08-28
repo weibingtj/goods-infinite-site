@@ -307,7 +307,7 @@ def build_article(meta, body, slug):
 <meta name="twitter:description" content="{html.escape(excerpt)}">
 <meta name="twitter:image" content="{SITE}/assets/images/og-cover.webp">
 <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20260828-2">
 {breadcrumb_ld}
 {article_ld}
 {faq_ld}
@@ -371,7 +371,7 @@ def build_index(articles):
 <meta name="twitter:title" content="Insights — China Market Entry Guides | GOODSINFINITE">
 <meta name="twitter:description" content="Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.">
 <meta name="twitter:image" content="{SITE}/assets/images/og-cover.webp">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=20260828-2">
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@type":"CollectionPage","name":"GOODSINFINITE Insights","url":"{SITE}/insights/index.html"}}
 </script>

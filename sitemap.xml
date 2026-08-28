@@ -1,104 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.goods-infinite.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.goods-infinite.com/enter-china.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.goods-infinite.com/bonded-warehouse-customs.html</loc><changefreq>monthly</changefreq><priority>0.9</priority>    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/warehouse-floor.webp</image:loc>
-      <image:title>1210 bonded warehouse live commerce floor, Tianjin FTZ</image:title>
-      <image:caption>GOODSINFINITE real operations: 1210 bonded warehouse live commerce floor, Tianjin FTZ</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-</url>
-  <url><loc>https://www.goods-infinite.com/ecommerce-operations.html</loc><changefreq>monthly</changefreq><priority>0.8</priority>    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/live-studio.webp</image:loc>
-      <image:title>In-house live commerce studio with ring light</image:title>
-      <image:caption>GOODSINFINITE real operations: In-house live commerce studio with ring light</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/livestream-booth.webp</image:loc>
-      <image:title>Compact livestream booth, ring-light setup</image:title>
-      <image:caption>GOODSINFINITE real operations: Compact livestream booth, ring-light setup</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/warehouse-floor.webp</image:loc>
-      <image:title>1210 bonded warehouse live commerce floor, Tianjin FTZ</image:title>
-      <image:caption>GOODSINFINITE real operations: 1210 bonded warehouse live commerce floor, Tianjin FTZ</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-</url>
+  <url><loc>https://www.goods-infinite.com/bonded-warehouse-customs.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.goods-infinite.com/ecommerce-operations.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.goods-infinite.com/china-marketing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.goods-infinite.com/source-from-china.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.goods-infinite.com/pricing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.goods-infinite.com/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.goods-infinite.com/about.html</loc><changefreq>yearly</changefreq><priority>0.6</priority>    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/warehouse-floor.webp</image:loc>
-      <image:title>1210 bonded warehouse live commerce floor, Tianjin FTZ</image:title>
-      <image:caption>GOODSINFINITE real operations: 1210 bonded warehouse live commerce floor, Tianjin FTZ</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/operations-office.webp</image:loc>
-      <image:title>Cross-border operations office, 9 pods, Tianjin</image:title>
-      <image:caption>GOODSINFINITE real operations: Cross-border operations office, 9 pods, Tianjin</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/live-studio.webp</image:loc>
-      <image:title>In-house live commerce studio with ring light</image:title>
-      <image:caption>GOODSINFINITE real operations: In-house live commerce studio with ring light</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/office-cubicles.webp</image:loc>
-      <image:title>Open-plan office, Tianjin FTZ HQ</image:title>
-      <image:caption>GOODSINFINITE real operations: Open-plan office, Tianjin FTZ HQ</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/training-room.webp</image:loc>
-      <image:title>Operator training room, Tianjin team</image:title>
-      <image:caption>GOODSINFINITE real operations: Operator training room, Tianjin team</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/tiyota-office.webp</image:loc>
-      <image:title>Tianjin FTZ HQ, Mass-Innovation Building</image:title>
-      <image:caption>GOODSINFINITE real operations: Tianjin FTZ HQ, Mass-Innovation Building</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/team-workshop.webp</image:loc>
-      <image:title>Cross-border sourcing/customs team workshop</image:title>
-      <image:caption>GOODSINFINITE real operations: Cross-border sourcing/customs team workshop</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/retail-showroom.webp</image:loc>
-      <image:title>Cross-border retail showroom, product display</image:title>
-      <image:caption>GOODSINFINITE real operations: Cross-border retail showroom, product display</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/training-lecture.webp</image:loc>
-      <image:title>Training lecture room, regulatory briefings</image:title>
-      <image:caption>GOODSINFINITE real operations: Training lecture room, regulatory briefings</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/hot-desk.webp</image:loc>
-      <image:title>Open hot-desk area, sourcing &amp; marketing pods</image:title>
-      <image:caption>GOODSINFINITE real operations: Open hot-desk area, sourcing &amp; marketing pods</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.goods-infinite.com/assets/images/livestream-booth.webp</image:loc>
-      <image:title>Compact livestream booth, ring-light setup</image:title>
-      <image:caption>GOODSINFINITE real operations: Compact livestream booth, ring-light setup</image:caption>
-      <image:license>https://www.goods-infinite.com/</image:license>
-    </image:image>
-</url>
+  <url><loc>https://www.goods-infinite.com/about.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.goods-infinite.com/author-bing.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.goods-infinite.com/contact.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.goods-infinite.com/guide-china-market-entry.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>

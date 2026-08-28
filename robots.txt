@@ -18,3 +18,4 @@ User-agent: Applebot
 Allow: /
 
 Sitemap: https://www.goods-infinite.com/sitemap.xml
+Sitemap: https://www.goods-infinite.com/sitemap-photos.xml

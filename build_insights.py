@@ -9,7 +9,7 @@ insights/index.html. Decap CMS edits the markdown; this script publishes it.
 Usage:  python build_insights.py
 Deploy: set the Cloudflare Pages build command to `python build_insights.py`.
 """
-import re, json, html, datetime
+import re, json, html, datetime, urllib.request, urllib.error
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -29,6 +29,15 @@ OUT = ROOT / "insights"
 OUT.mkdir(parents=True, exist_ok=True)
 
 SITE = "https://www.goods-infinite.com"
+
+# ---------- IndexNow (instant Bing indexing) ----------
+# Bing pings are non-fatal: a failed ping must never break the build or the
+# daily automation. The key file must be served at the site root so Bing can
+# verify ownership. Generate once, keep stable.
+INDEXNOW_KEY = "052b0dff0c0940ba80f9b983429dd192"
+INDEXNOW_KEY_FILE = ROOT / (INDEXNOW_KEY + ".txt")
+INDEXNOW_HOST = "www.goods-infinite.com"
+INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
 
 # Author (E-E-A-T). Add LinkedIn etc. to SAMEAS for stronger entity signals.
 AUTHOR = {
@@ -444,6 +453,39 @@ def build_llms_insights(articles):
     p.write_text(text2, encoding='utf-8')
     print('updated llms.txt Insights section')
 
+def write_indexnow_key_file():
+    """Publish the IndexNow key at the site root so Bing can verify ownership.
+    The file must be reachable at https://<host>/<key>.txt and contain only the key."""
+    INDEXNOW_KEY_FILE.write_text(INDEXNOW_KEY, encoding='utf-8')
+    print('wrote IndexNow key file', INDEXNOW_KEY_FILE.name)
+
+def ping_indexnow(url_list):
+    """Notify Bing (and any IndexNow-participating engine) of changed URLs.
+    Non-fatal: any network/HTTP error is logged and swallowed so the build
+    and the daily automation keep running regardless."""
+    if not url_list:
+        return
+    payload = json.dumps({
+        "host": INDEXNOW_HOST,
+        "key": INDEXNOW_KEY,
+        "keyLocation": f"https://{INDEXNOW_HOST}/{INDEXNOW_KEY}.txt",
+        "urlList": url_list,
+    }).encode('utf-8')
+    req = urllib.request.Request(
+        INDEXNOW_ENDPOINT,
+        data=payload,
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            print(f'IndexNow ping -> HTTP {r.getcode()} ({len(url_list)} urls)')
+    except urllib.error.HTTPError as e:
+        body = e.read().decode('utf-8', 'ignore')[:200]
+        print(f'IndexNow ping -> HTTP {e.code} {e.reason} (non-fatal) {body}')
+    except Exception as e:
+        print(f'IndexNow ping skipped: {e} (non-fatal)')
+
 def main():
     articles = []
     for md in sorted(SRC.glob('*.md')):
@@ -460,6 +502,13 @@ def main():
         print('built insights/index.html + sitemap.xml + llms.txt')
     else:
         print('no articles found in', SRC)
+    # IndexNow: publish the key file, then notify Bing of every known URL
+    # (static pages + all insights) so new and updated pages index fast.
+    write_indexnow_key_file()
+    urls = [f'{SITE}/{p}' for p, _, _ in STATIC_PAGES]
+    for a in articles:
+        urls.append(f'{SITE}/insights/{a["slug"]}.html')
+    ping_indexnow(urls)
 
 if __name__ == '__main__':
     main()

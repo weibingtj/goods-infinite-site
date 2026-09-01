@@ -1,0 +1,7 @@
+# Cloudflare Pages _redirects
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Fix typo slug discovered via GSC "Page with redirect" report
+# (typo: 1210-vs-9610-0110 missing the second "vs"). External sources
+# still link to the typo; 301 to the correct page.
+/insights/1210-vs-9610-0110.html  /insights/1210-vs-9610-vs-0110.html  301

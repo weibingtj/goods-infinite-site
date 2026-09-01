@@ -4,13 +4,9 @@
 # Fix typo slug discovered via GSC "Page with redirect" report
 # (typo: 1210-vs-9610-0110 missing the second "vs"). External sources
 # still link to the typo; 301 to the correct page.
+#
+# NOTE: Do NOT add extensionless→.html redirect rules here. Cloudflare
+# Pages' built-in trailing-slash already forces /.html → extensionless
+# 301, and adding a reverse rule forms an infinite redirect loop
+# (ERR_TOO_MANY_REDIRECTS in browsers).
 /insights/1210-vs-9610-0110.html  /insights/1210-vs-9610-vs-0110.html  301
-
-# Canonical-stability rules: force extensionless requests to the .html
-# authority URL (matching <link rel="canonical"> and sitemap). Prevents
-# Cloudflare's automatic trailing-slash from leaving .html pages in GSC's
-# "Page with redirect" queue. These patterns only match extensionless
-# paths, so they never loop with the .html files themselves.
-/insights/:slug  /insights/:slug.html  301
-/ecommerce-operations  /ecommerce-operations.html  301
-/bonded-warehouse-cost-process  /bonded-warehouse-cost-process.html  301

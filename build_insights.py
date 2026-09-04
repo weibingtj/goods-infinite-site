@@ -241,12 +241,48 @@ def parse_frontmatter(text):
     meta['faq'] = faq
     return meta, body
 
+# ---------- Phase 3: internal linking clusters ----------
+# The raw `cluster` frontmatter on insights is inconsistent (16 ad-hoc labels).
+# We normalise every article into one of six canonical topic clusters that map
+# to the site's five-stage pillar model, then auto-link siblings + the pillar.
+CANON = {
+    "Market Research": "Market Research",
+    "Compliance": "Compliance & Registration",
+    "1210": "Compliance & Registration",
+    "Brand & IP": "Compliance & Registration",
+    "Beauty": "Compliance & Registration",
+    "Entry": "Market Entry & Entity",
+    "Entity Setup": "Market Entry & Entity",
+    "entity": "Market Entry & Entity",
+    "Setup & HR": "Market Entry & Entity",
+    "E-commerce": "E-commerce Operations",
+    "ecommerce": "E-commerce Operations",
+    "New Media": "Marketing & New Media",
+    "Marketing": "Marketing & New Media",
+    "Logistics": "Logistics & Distribution",
+    "Distribution": "Logistics & Distribution",
+    "Import Agent": "Logistics & Distribution",
+}
+CLUSTER_ORDER = ["Market Research", "Market Entry & Entity",
+                 "Compliance & Registration", "E-commerce Operations",
+                 "Marketing & New Media", "Logistics & Distribution"]
+# canonical cluster -> (pillar page, pillar title) for the up-link
+CLUSTER_PILLAR = {
+    "Market Research": ("guide-china-market-entry.html", "China Market Entry Guide"),
+    "Market Entry & Entity": ("enter-china.html", "Enter China"),
+    "Compliance & Registration": ("bonded-warehouse-customs.html", "Bonded Warehouse & Customs"),
+    "E-commerce Operations": ("ecommerce-operations.html", "E-commerce Operations"),
+    "Marketing & New Media": ("china-marketing.html", "China Marketing"),
+    "Logistics & Distribution": ("bonded-warehouse-customs.html", "Bonded Warehouse & Customs"),
+}
+
 def build_article(meta, body, slug):
     title = meta.get('title', slug)
     date = meta.get('date', datetime.date.today().isoformat())
     now = datetime.date.today().isoformat()  # build date -> freshness signal for GEO
     excerpt = meta.get('excerpt', '')
     cluster = meta.get('cluster', '')
+    canon = CANON.get(cluster, cluster or "General")
     body_html = md_to_html(body)
     faq = meta.get('faq', [])
     faq_ld = ''
@@ -293,7 +329,7 @@ def build_article(meta, body, slug):
                       "url": SITE + "/"},
         "mainEntityOfPage": SITE + "/insights/" + slug + ".html",
         "image": SITE + "/assets/images/og-cover.webp",
-        "keywords": cluster
+        "keywords": canon
     }, ensure_ascii=False, indent=2) + '\n</script>')
 
     doc = f"""<!DOCTYPE html>
@@ -326,7 +362,7 @@ def build_article(meta, body, slug):
 {NAV}
 <section class="pagehero">
   <div class="container">
-    <p class="crumbs"><a href="/">Home</a> / <a href="/insights/index.html">Insights</a> / {html.escape(cluster)}</p>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/insights/index.html">Insights</a> / {html.escape(canon)}</p>
     <h1>{html.escape(title)}</h1>
     <p class="lead">{html.escape(excerpt)}</p>
     <p class="muted">Published {html.escape(date)} · Last updated {html.escape(now)} · By <a href="../author-bing.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
@@ -337,6 +373,7 @@ def build_article(meta, body, slug):
     <article class="article">
 {body_html}
     </article>{SOURCES_BLOCK}
+<!--RELATED_PLACEHOLDER-->
     <div class="ctaband" style="margin-top:40px">
       <h2>Talk to our China entry team</h2>
       <p>Have a question about your product's path into China? Book a free 30-minute call.</p>
@@ -349,18 +386,34 @@ def build_article(meta, body, slug):
 </body>
 </html>
 """
-    (OUT / f"{slug}.html").write_text(doc, encoding='utf-8')
-    return {"slug": slug, "title": title, "date": date, "excerpt": excerpt, "cluster": cluster}
+    a = {"slug": slug, "title": title, "date": date, "excerpt": excerpt, "cluster": cluster, "canon": canon}
+    return doc, a
 
 def build_index(articles):
-    cards = []
-    for a in sorted(articles, key=lambda x: x['date'], reverse=True):
-        cards.append(f"""      <a class="card insight-card" href="{a['slug']}.html">
-        <span class="tag">{html.escape(a['cluster'])}</span>
+    groups = {c: [] for c in CLUSTER_ORDER}
+    for a in articles:
+        groups.setdefault(a['canon'], []).append(a)
+    blocks = []
+    for c in CLUSTER_ORDER:
+        items = sorted(groups.get(c, []), key=lambda x: x['date'], reverse=True)
+        if not items:
+            continue
+        cards = []
+        for a in items:
+            cards.append(f"""      <a class="card insight-card" href="{a['slug']}.html">
+        <span class="tag">{html.escape(a['canon'])}</span>
         <h3>{html.escape(a['title'])}</h3>
         <p class="muted">{html.escape(a['excerpt'])}</p>
         <span class="more">Read →</span>
       </a>""")
+        pillar = CLUSTER_PILLAR.get(c)
+        more = f'<p style="margin-top:16px"><a class="btn btn-green" href="../{pillar[0]}">{pillar[1]} →</a></p>' if pillar else ''
+        blocks.append(f"""    <div class="cluster">
+      <h2>{html.escape(c)}</h2>
+      <div class="grid cols-2">
+{chr(10).join(cards)}
+      </div>{more}
+    </div>""")
     doc = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -397,9 +450,7 @@ def build_index(articles):
 </section>
 <section>
   <div class="container">
-    <div class="grid cols-2">
-{chr(10).join(cards)}
-    </div>
+{chr(10).join(blocks)}
   </div>
 </section>
 {FOOTER}
@@ -408,6 +459,29 @@ def build_index(articles):
 </html>
 """
     (OUT / "index.html").write_text(doc, encoding='utf-8')
+
+
+def build_related_html(a, articles, limit=4):
+    """Phase 3: link each article to sibling articles in the same canonical
+    cluster plus an up-link to the cluster's pillar page."""
+    sibs = [x for x in articles if x['canon'] == a['canon'] and x['slug'] != a['slug']]
+    sibs.sort(key=lambda x: x['date'], reverse=True)
+    picks = sibs[:limit]
+    if not picks:
+        return ''
+    cards = []
+    for s in picks:
+        cards.append(f"""      <a class="card insight-card" href="{s['slug']}.html">
+        <span class="tag">{html.escape(s['canon'])}</span>
+        <h3>{html.escape(s['title'])}</h3>
+        <p class="muted">{html.escape(s['excerpt'])}</p>
+        <span class="more">Read →</span>
+      </a>""")
+    pillar = CLUSTER_PILLAR.get(a['canon'])
+    more = f'<p style="margin-top:16px"><a class="btn btn-green" href="../{pillar[0]}">Explore {pillar[1]} →</a></p>' if pillar else ''
+    return ('<section class="related">\n  <div class="container">\n'
+            f'    <h2>More on {html.escape(a["canon"])}</h2>\n'
+            f'    <div class="grid cols-2">\n{chr(10).join(cards)}\n    </div>\n{more}  </div>\n</section>')
 
 STATIC_PAGES = [
     ("", "weekly", "1.0"),
@@ -495,13 +569,21 @@ def ping_indexnow(url_list):
 
 def main():
     articles = []
+    parsed = []
     for md in sorted(SRC.glob('*.md')):
         text = md.read_text(encoding='utf-8')
         meta, body = parse_frontmatter(text)
         slug = md.stem
-        a = build_article(meta, body, slug)
+        doc, a = build_article(meta, body, slug)
+        parsed.append((doc, a))
         articles.append(a)
         print('built', slug)
+    # Phase 3: inject internal-linking "related" sections now that the full
+    # article list (and each article's canonical cluster) is known.
+    for doc, a in parsed:
+        related = build_related_html(a, articles)
+        doc = doc.replace('<!--RELATED_PLACEHOLDER-->', related)
+        (OUT / f"{a['slug']}.html").write_text(doc, encoding='utf-8')
     if articles:
         build_index(articles)
         build_sitemap(articles)

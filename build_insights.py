@@ -106,7 +106,7 @@ ORG_DATA = {
             "url": SITE + "/",
             "logo": SITE + "/assets/images/logo.svg",
             "image": SITE + "/assets/images/og-cover.webp",
-            "description": "Hong Kong trading company that helps overseas brands enter the China market and fulfill orders inside China through bonded warehousing, 1210 cross-border import, customs clearance and China e-commerce operations.",
+            "description": "Hong Kong trading company (importer of record) that helps overseas brands enter the China market and fulfill orders via a cooperative bonded-fulfillment network — 1210 cross-border import, customs clearance and China e-commerce operations across Tianjin, Shanghai, Ningbo, Guangzhou and Qingdao.",
             "email": "goodsinfinite@goods-infinite.com",
             "taxID": "2972326",
             "address": {

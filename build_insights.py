@@ -275,6 +275,16 @@ CLUSTER_PILLAR = {
     "Marketing & New Media": ("china-marketing.html", "China Marketing"),
     "Logistics & Distribution": ("bonded-warehouse-customs.html", "Bonded Warehouse & Customs"),
 }
+# reverse map: pillar page -> canonical clusters that feed it (down-links)
+PILLAR_CLUSTERS = {
+    "guide-china-market-entry.html": ["Market Research"],
+    "enter-china.html": ["Market Entry & Entity"],
+    "bonded-warehouse-customs.html": ["Compliance & Registration", "Logistics & Distribution"],
+    "ecommerce-operations.html": ["E-commerce Operations"],
+    "china-marketing.html": ["Marketing & New Media"],
+}
+PILLAR_RELATED_START = "<!--PILLAR_RELATED-->"
+PILLAR_RELATED_END = "<!--/PILLAR_RELATED-->"
 
 def build_article(meta, body, slug):
     title = meta.get('title', slug)
@@ -483,6 +493,47 @@ def build_related_html(a, articles, limit=4):
             f'    <h2>More on {html.escape(a["canon"])}</h2>\n'
             f'    <div class="grid cols-2">\n{chr(10).join(cards)}\n    </div>\n{more}  </div>\n</section>')
 
+
+def build_pillar_related(pillar_file, articles, limit=6):
+    """Phase 3 down-link: inject a 'Related insights' block into a pillar
+    (service) page, linking the top articles from the clusters that feed it.
+    Idempotent — strips any prior block first so rebuilds stay clean."""
+    clusters = PILLAR_CLUSTERS.get(pillar_file)
+    if not clusters:
+        return
+    picks = [a for a in articles if a['canon'] in clusters]
+    picks.sort(key=lambda x: x['date'], reverse=True)
+    picks = picks[:limit]
+    if not picks:
+        return
+    cards = []
+    for s in picks:
+        cards.append(f"""      <a class="card insight-card" href="/insights/{s['slug']}.html">
+        <span class="tag">{html.escape(s['canon'])}</span>
+        <h3>{html.escape(s['title'])}</h3>
+        <p class="muted">{html.escape(s['excerpt'])}</p>
+        <span class="more">Read →</span>
+      </a>""")
+    block = (f'{PILLAR_RELATED_START}\n<section class="related">\n'
+             '  <div class="container">\n'
+             '    <h2>Related insights</h2>\n'
+             f'    <div class="grid cols-3">\n{chr(10).join(cards)}\n    </div>\n'
+             '    <p style="margin-top:18px"><a class="btn btn-green" href="/insights/index.html">Browse all insights →</a></p>\n'
+             '  </div>\n</section>\n' + PILLAR_RELATED_END)
+    path = ROOT / pillar_file
+    if not path.exists():
+        return
+    html_text = path.read_text(encoding='utf-8')
+    # strip any previous injected block (idempotent across rebuilds)
+    pat = re.compile(re.escape(PILLAR_RELATED_START) + r'.*?' + re.escape(PILLAR_RELATED_END) + r'\n?', re.S)
+    html_text = pat.sub('', html_text)
+    if '<!-- FOOTER -->' in html_text:
+        html_text = html_text.replace('<!-- FOOTER -->', block + '\n<!-- FOOTER -->', 1)
+    else:
+        html_text = html_text + '\n' + block
+    path.write_text(html_text, encoding='utf-8')
+    print('pillar down-link ->', pillar_file, f'({len(picks)} insights)')
+
 STATIC_PAGES = [
     ("", "weekly", "1.0"),
     ("enter-china.html", "monthly", "0.9"),
@@ -589,6 +640,9 @@ def main():
         build_sitemap(articles)
         build_llms_insights(articles)
         print('built insights/index.html + sitemap.xml + llms.txt')
+        # Phase 3 down-links: inject related insights into each pillar page
+        for pillar_file in PILLAR_CLUSTERS:
+            build_pillar_related(pillar_file, articles)
     else:
         print('no articles found in', SRC)
     # IndexNow: publish the key file, then notify Bing of every known URL

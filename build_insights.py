@@ -286,6 +286,32 @@ PILLAR_CLUSTERS = {
 PILLAR_RELATED_START = "<!--PILLAR_RELATED-->"
 PILLAR_RELATED_END = "<!--/PILLAR_RELATED-->"
 
+def trim_to(s, n):
+    """Trim to <=n chars at a word boundary, append an ellipsis if cut.
+    Used for SERP-safe <title> / meta description (H1/lead stay full)."""
+    s = (s or '').strip()
+    if len(s) <= n:
+        return s
+    cut = s[:n]
+    sp = cut.rfind(' ')
+    if sp > n * 0.55:
+        cut = cut[:sp]
+    return cut.rstrip(' ,;:-—') + '…'
+
+
+def seo_trim(text, n):
+    """Escape first, then trim — guarantees the final (escaped) meta
+    description is <=n chars even when & becomes &amp; etc."""
+    esc = html.escape((text or '').strip())
+    if len(esc) <= n:
+        return esc
+    cut = esc[:n]
+    sp = cut.rfind(' ')
+    if sp > n * 0.55:
+        cut = cut[:sp]
+    return cut.rstrip(' ,;:-—') + '…'
+
+
 def build_article(meta, body, slug):
     title = meta.get('title', slug)
     date = meta.get('date', datetime.date.today().isoformat())
@@ -294,6 +320,9 @@ def build_article(meta, body, slug):
     cluster = meta.get('cluster', '')
     canon = CANON.get(cluster, cluster or "General")
     body_html = md_to_html(body)
+    # SERP-safe variants: keep H1/lead full, trim the title tag + meta desc
+    seo_title = trim_to(title, 52) + " | GOODSINFINITE"
+    seo_desc = seo_trim(excerpt, 155)  # already HTML-escaped, safe to insert raw
     faq = meta.get('faq', [])
     faq_ld = ''
     if faq:
@@ -347,20 +376,20 @@ def build_article(meta, body, slug):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{html.escape(title)} | GOODSINFINITE Insights</title>
-<meta name="description" content="{html.escape(excerpt)}">
+<title>{html.escape(seo_title)}</title>
+<meta name="description" content="{seo_desc}">
 <link rel="canonical" href="{SITE}/insights/{slug}.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
-<meta property="og:title" content="{html.escape(title)}">
-<meta property="og:description" content="{html.escape(excerpt)}">
+<meta property="og:title" content="{html.escape(seo_title)}">
+<meta property="og:description" content="{seo_desc}">
 <meta property="og:url" content="{SITE}/insights/{slug}.html">
 <meta property="og:image" content="{SITE}/assets/images/og-cover.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height"  content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{html.escape(title)}">
-<meta name="twitter:description" content="{html.escape(excerpt)}">
+<meta name="twitter:title" content="{html.escape(seo_title)}">
+<meta name="twitter:description" content="{seo_desc}">
 <meta name="twitter:image" content="{SITE}/assets/images/og-cover.webp">
 <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css?v=20260828-2">

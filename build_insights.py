@@ -65,7 +65,7 @@ SOURCES_BLOCK = """
 NAV = """
 <header class="nav">
   <div class="container nav-inner">
-    <a href="../index.html" class="logo"><svg class="brand-mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M6 14 C6 10 10 10 14 14 C18 18 22 18 22 14 C22 10 18 10 14 14 C10 18 6 18 6 14 Z" fill="none" stroke="#0b4f9c" stroke-width="3" stroke-linecap="round"/><path d="M14 18 L14 9 M11 12 L14 8.5 L17 12" fill="none" stroke="#1b8a5a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>GOODS<b>INFINITE</b></a>
+    <a href="/" class="logo"><svg class="brand-mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M6 14 C6 10 10 10 14 14 C18 18 22 18 22 14 C22 10 18 10 14 14 C10 18 6 18 6 14 Z" fill="none" stroke="#0b4f9c" stroke-width="3" stroke-linecap="round"/><path d="M14 18 L14 9 M11 12 L14 8.5 L17 12" fill="none" stroke="#1b8a5a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>GOODS<b>INFINITE</b></a>
     <nav class="nav-links">
       <a href="../enter-china.html">Enter China</a>
       <a href="../bonded-warehouse-customs.html">Bonded &amp; Customs</a>
@@ -292,6 +292,7 @@ def build_article(meta, body, slug):
         "publisher": {"@type": "Organization", "name": "GOODSINFINITE TRADE LIMITED",
                       "url": SITE + "/"},
         "mainEntityOfPage": SITE + "/insights/" + slug + ".html",
+        "image": SITE + "/assets/images/og-cover.webp",
         "keywords": cluster
     }, ensure_ascii=False, indent=2) + '\n</script>')
 
@@ -325,7 +326,7 @@ def build_article(meta, body, slug):
 {NAV}
 <section class="pagehero">
   <div class="container">
-    <p class="crumbs"><a href="../index.html">Home</a> / <a href="index.html">Insights</a> / {html.escape(cluster)}</p>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/insights/index.html">Insights</a> / {html.escape(cluster)}</p>
     <h1>{html.escape(title)}</h1>
     <p class="lead">{html.escape(excerpt)}</p>
     <p class="muted">Published {html.escape(date)} · Last updated {html.escape(now)} · By <a href="../author-bing.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
@@ -427,12 +428,18 @@ STATIC_PAGES = [
 
 def build_sitemap(articles):
     """Regenerate sitemap.xml from STATIC_PAGES + every insight article, so new
-    posts are never missed by crawlers/AI engines again."""
+    posts are never missed by crawlers/AI engines again. Includes <lastmod>
+    from each source file's mtime as a freshness signal for crawlers."""
+    today = datetime.date.today().isoformat()
     urls = []
     for path, cf, pr in STATIC_PAGES:
-        urls.append(f'  <url><loc>{SITE}/{path}</loc><changefreq>{cf}</changefreq><priority>{pr}</priority></url>')
+        fpath = (ROOT / "index.html") if path == "" else (ROOT / path)
+        lm = datetime.date.fromtimestamp(fpath.stat().st_mtime).isoformat() if fpath.exists() else today
+        urls.append(f'  <url><loc>{SITE}/{path}</loc><lastmod>{lm}</lastmod><changefreq>{cf}</changefreq><priority>{pr}</priority></url>')
     for a in sorted(articles, key=lambda x: x['date'], reverse=True):
-        urls.append(f'  <url><loc>{SITE}/insights/{a["slug"]}.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>')
+        md = SRC / (a["slug"] + ".md")
+        lm = datetime.date.fromtimestamp(md.stat().st_mtime).isoformat() if md.exists() else today
+        urls.append(f'  <url><loc>{SITE}/insights/{a["slug"]}.html</loc><lastmod>{lm}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>')
     doc = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "\n".join(urls) + "\n</urlset>\n")

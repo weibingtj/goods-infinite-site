@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 # Block Cloudflare's email-protection internal path from being indexed
 Disallow: /cdn-cgi/
+# Decap CMS admin panel and its auth endpoints — not for public indexing
+Disallow: /admin/
+Disallow: /api/
 
 # Explicit AI crawler allows — signal that this site welcomes generative-engine indexing.
 User-agent: GPTBot

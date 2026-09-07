@@ -500,14 +500,32 @@ def build_index(articles):
     (OUT / "index.html").write_text(doc, encoding='utf-8')
 
 
+def _balanced_siblings(a, articles, limit=4):
+    """Pick sibling articles using a deterministic ring rotation.
+
+    Sorting purely by date meant older articles were never picked by anyone,
+    leaving them with 1-2 inbound internal links (orphan-ish). Rotating the
+    ring means every article in a cluster is cited by exactly `limit`
+    neighbours, so link equity spreads evenly. Deterministic (ordered by
+    slug), so rebuilds never shuffle the mesh.
+    """
+    peers = sorted([x for x in articles if x['canon'] == a['canon']],
+                   key=lambda x: x['slug'])
+    if len(peers) <= 1:
+        return []
+    idx = next((i for i, x in enumerate(peers) if x['slug'] == a['slug']), 0)
+    n = len(peers)
+    picks = [peers[(idx + k) % n] for k in range(1, min(limit, n - 1) + 1)]
+    return picks
+
+
 def build_related_html(a, articles, limit=4):
     """Phase 3: link each article to sibling articles in the same canonical
     cluster plus an up-link to the cluster's pillar page."""
-    sibs = [x for x in articles if x['canon'] == a['canon'] and x['slug'] != a['slug']]
-    sibs.sort(key=lambda x: x['date'], reverse=True)
-    picks = sibs[:limit]
+    picks = _balanced_siblings(a, articles, limit)
     if not picks:
         return ''
+    picks = sorted(picks, key=lambda x: x['date'], reverse=True)
     cards = []
     for s in picks:
         cards.append(f"""      <a class="card insight-card" href="{s['slug']}.html">
@@ -532,7 +550,14 @@ def build_pillar_related(pillar_file, articles, limit=6):
         return
     picks = [a for a in articles if a['canon'] in clusters]
     picks.sort(key=lambda x: x['date'], reverse=True)
-    picks = picks[:limit]
+    if len(picks) > limit:
+        # Head = freshest guides (what a visitor wants); tail = oldest ones so
+        # they still collect a pillar down-link instead of staying orphan-ish.
+        head_n = min(4, limit)
+        tail_n = limit - head_n
+        head = picks[:head_n]
+        tail = picks[-tail_n:] if tail_n else []
+        picks = head + [x for x in tail if x not in head]
     if not picks:
         return
     cards = []

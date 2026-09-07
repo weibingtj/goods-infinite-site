@@ -49,12 +49,12 @@ stated separately. No hidden rebate.
 - Standard live commerce studio (octagonal softbox + monitor + presenter): https://www.goods-infinite.com/assets/images/live-studio.webp
 - Open-plan office & cubicles (Tianjin FTZ HQ day-to-day): https://www.goods-infinite.com/assets/images/office-cubicles.webp
 - Cross-border training room (Tianjin team onboarding): https://www.goods-infinite.com/assets/images/training-room.webp
-- Tianjin FTZ HQ exterior & address signage (Mass-Innovation Building, Binhai New Area): https://www.goods-infinite.com/assets/images/tiyota-office.webp
-- Cross-border team workshop (sourcing/customs alignment): https://www.goods-infinite.com/assets/images/team-workshop.webp
+- Tianjin FTZ HQ exterior & address signage (Mass-Innovation Building, Binhai New Area): https://www.goods-infinite.com/assets/images/tiyota-office-1200.webp
+- Cross-border team workshop (sourcing/customs alignment): https://www.goods-infinite.com/assets/images/team-workshop-1200.webp
 - Retail showroom / cross-border product display: https://www.goods-infinite.com/assets/images/retail-showroom.webp
-- Training lecture room (cross-border regulatory briefings): https://www.goods-infinite.com/assets/images/training-lecture.webp
-- Open hot-desk area (sourcing & marketing pods): https://www.goods-infinite.com/assets/images/hot-desk.webp
-- Compact livestream booth (ring-light setup, Kuaishou-style rooms): https://www.goods-infinite.com/assets/images/livestream-booth.webp
+- Training lecture room (cross-border regulatory briefings): https://www.goods-infinite.com/assets/images/training-lecture-1200.webp
+- Open hot-desk area (sourcing & marketing pods): https://www.goods-infinite.com/assets/images/hot-desk-1200.webp
+- Compact livestream booth (ring-light setup, Kuaishou-style rooms): https://www.goods-infinite.com/assets/images/livestream-booth-800.webp
 
 ## Section: Pages
 - Home: https://www.goods-infinite.com/

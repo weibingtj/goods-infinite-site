@@ -554,7 +554,9 @@ def build_pillar_related(pillar_file, articles, limit=6):
         return
     html_text = path.read_text(encoding='utf-8')
     # strip any previous injected block (idempotent across rebuilds)
-    pat = re.compile(re.escape(PILLAR_RELATED_START) + r'.*?' + re.escape(PILLAR_RELATED_END) + r'\n?', re.S)
+    # Eat surrounding blank lines too, so repeated rebuilds cannot accumulate
+    # extra newlines before the injected block (keeps diffs clean).
+    pat = re.compile(r'\n*' + re.escape(PILLAR_RELATED_START) + r'.*?' + re.escape(PILLAR_RELATED_END) + r'\n*', re.S)
     html_text = pat.sub('', html_text)
     if '<!-- FOOTER -->' in html_text:
         html_text = html_text.replace('<!-- FOOTER -->', block + '\n<!-- FOOTER -->', 1)

@@ -670,10 +670,28 @@ def ping_indexnow(url_list):
         with urllib.request.urlopen(req, timeout=15) as r:
             print(f'IndexNow ping -> HTTP {r.getcode()} ({len(url_list)} urls)')
     except urllib.error.HTTPError as e:
-        body = e.read().decode('utf-8', 'ignore')[:200]
+        body = e.read().decode('utf-8', 'ignore')[:300]
         print(f'IndexNow ping -> HTTP {e.code} {e.reason} (non-fatal) {body}')
+        if e.code == 403:
+            print('   -> ownership NOT proven. Most common cause: the edge '
+                  f'(Cloudflare) blocks the validator\'s request. Check https://{INDEXNOW_HOST}/'
+                  f'{INDEXNOW_KEY}.txt returns 200 for a non-browser client too.')
     except Exception as e:
         print(f'IndexNow ping skipped: {e} (non-fatal)')
+
+
+def verify_indexnow_key_file():
+    """Self-check the public key file before submitting, so an invisible auth
+    failure becomes a loud one instead of another silent 403."""
+    loc = f'https://{INDEXNOW_HOST}/{INDEXNOW_KEY}.txt'
+    try:
+        req = urllib.request.Request(loc, headers={'User-Agent': 'Mozilla/5.0 (IndexNow-selfcheck)'})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            body = r.read().decode('utf-8', 'ignore').strip()
+            ok = (r.getcode() == 200 and body == INDEXNOW_KEY)
+            print(f'IndexNow key file {loc} -> {"OK" if ok else "MISMATCH"}')
+    except Exception as e:
+        print(f'IndexNow key file check unreachable from this network: {e}')
 
 _INSIGHT_LINK_FIXERS_PLACEHOLDER = None
 
@@ -736,6 +754,7 @@ def main():
     # IndexNow: publish the key file, then notify Bing of every known URL
     # (static pages + all insights) so new and updated pages index fast.
     write_indexnow_key_file()
+    verify_indexnow_key_file()
     urls = [f'{SITE}/{p}' for p, _, _ in STATIC_PAGES]
     for a in articles:
         urls.append(f'{SITE}/insights/{a["slug"]}.html')

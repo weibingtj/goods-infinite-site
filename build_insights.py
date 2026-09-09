@@ -34,7 +34,7 @@ SITE = "https://www.goods-infinite.com"
 # Bing pings are non-fatal: a failed ping must never break the build or the
 # daily automation. The key file must be served at the site root so Bing can
 # verify ownership. Generate once, keep stable.
-INDEXNOW_KEY = "b9356a3c25dc4081b6765843db9bcd0f"
+INDEXNOW_KEY = "42646d6ded56f9eab6f517f9c515738a"
 INDEXNOW_KEY_FILE = ROOT / (INDEXNOW_KEY + ".txt")
 INDEXNOW_HOST = "www.goods-infinite.com"
 # Each engine validates the key independently. api.indexnow.org and

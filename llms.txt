@@ -28,6 +28,10 @@ stated separately. No hidden rebate.
   bonded zone and cleared per order, paying tax only when sold.
 - Many brands can import via the Hong Kong entity + 1210 without setting up a
   Chinese WFOE; a WFOE is needed only for certain categories or deeper local presence.
+- GACC Decree No. 280 (effective 1 June 2026, replacing Decree 248) changed food
+  import registration: cross-border e-commerce retail imports are exempt from
+  overseas manufacturer registration (supervised as personal-use articles), while
+  general-trade imports still require self-registration via the CIFER portal.
 - GOODSINFINITE operates its own live cross-border storefronts, including Tmall
   Global "globalgo海外专营店" and Kuaishou (快手) "自贸环球购海外旗舰店".
 - Typical service fee: 3–8% of goods value, or a fixed project fee of $1,000–5,000.
@@ -62,6 +66,7 @@ stated separately. No hidden rebate.
 - Glossary (definitions): https://www.goods-infinite.com/glossary.html
 - Enter China: https://www.goods-infinite.com/enter-china.html
 - Bonded & Customs: https://www.goods-infinite.com/bonded-warehouse-customs.html
+- China Food Import Compliance Checklist: https://www.goods-infinite.com/china-food-import-compliance-checklist.html
 - E-commerce Ops: https://www.goods-infinite.com/ecommerce-operations.html
 - China Marketing: https://www.goods-infinite.com/china-marketing.html
 - Source from China: https://www.goods-infinite.com/source-from-china.html

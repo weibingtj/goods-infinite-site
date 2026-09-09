@@ -65,5 +65,5 @@ A: Account setup and content production can start modestly, but live commerce us
 ## Related reading
 
 - [China Market Entry Guide for Foreign Brands](/guide-china-market-entry.html)
-- [Tmall Global vs JD Worldwide vs Douyin for Cross-border Brands](/tmall-global-vs-jd-worldwide-vs-douyin.html)
+- [Tmall Global vs JD Worldwide vs Douyin for Cross-border Brands](/insights/tmall-global-vs-jd-worldwide-vs-douyin.html)
 - [Glossary of China import & marketing terms](/glossary.html)

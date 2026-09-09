@@ -76,7 +76,7 @@ A: The State Taxation Administration requires income from live and social commer
 
 ## Related reading
 
-- [China Social Platform Comparison Matrix](/china-social-platform-comparison-matrix.html)
-- [WeChat Marketing for Foreign Brands in China](/wechat-marketing-foreign-brand-china.html)
-- [China Import Compliance: CCC, NMPA & more](/china-import-compliance-ccc-nmpa.html)
+- [China Social Platform Comparison Matrix](/insights/china-social-platform-comparison-matrix.html)
+- [WeChat Marketing for Foreign Brands in China](/insights/wechat-marketing-foreign-brand-china.html)
+- [China Import Compliance: CCC, NMPA & more](/insights/china-import-compliance-ccc-nmpa.html)
 - [Glossary of China import & marketing terms](/glossary.html)

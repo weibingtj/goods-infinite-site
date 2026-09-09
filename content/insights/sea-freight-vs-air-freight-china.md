@@ -85,7 +85,7 @@ A: Yes — many brands ship steady demand by sea into the bonded zone and use ai
 
 ## Related reading
 
-- [China Bonded Warehouse: Cost, Process & How to Choose a City](/bonded-warehouse-cost-process.html)
-- [China Customs Clearance Process for Importers](/china-customs-clearance-process.html)
-- [What Is China's 1210 Bonded Import Model?](/what-is-1210-bonded-import.html)
+- [China Bonded Warehouse: Cost, Process & How to Choose a City](/insights/bonded-warehouse-cost-process.html)
+- [China Customs Clearance Process for Importers](/insights/china-customs-clearance-process.html)
+- [What Is China's 1210 Bonded Import Model?](/insights/what-is-1210-bonded-import.html)
 - [Glossary of China import terms](/glossary.html)

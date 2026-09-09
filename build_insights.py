@@ -605,6 +605,7 @@ STATIC_PAGES = [
     ("guide-china-market-entry.html", "monthly", "0.9"),
     ("glossary.html", "monthly", "0.7"),
     ("insights/index.html", "weekly", "0.7"),
+    ("china-food-import-compliance-checklist.html", "monthly", "0.8"),
 ]
 
 def build_sitemap(articles):
@@ -674,12 +675,43 @@ def ping_indexnow(url_list):
     except Exception as e:
         print(f'IndexNow ping skipped: {e} (non-fatal)')
 
+_INSIGHT_LINK_FIXERS_PLACEHOLDER = None
+
+
+def _fix_insight_target(target, slugs):
+    """Return the corrected target when target is a root-absolute insight slug."""
+    if not target.startswith('/'):
+        return target
+    t = target.lstrip('/')
+    if t.startswith('insights/'):
+        return target
+    # slugs are article stems (no .html); compare on the bare slug name
+    name = t.rsplit('/', 1)[-1][:-5] if t.endswith('.html') else t
+    return ('/insights/' + t) if name in slugs else target
+
+
+def normalize_insight_links(text, slugs):
+    """Fix internal links that omit the /insights/ prefix in article bodies.
+
+    Hand-authored and CMS-authored links are often written as /slug.html, which
+    resolves to a 404 at https://host/slug.html instead of
+    https://host/insights/slug.html. Rewrite any root-absolute link whose slug
+    belongs to the insights library. Idempotent."""
+    text = re.sub(r'\]\((/[^)\s]+\.html)\)',
+                  lambda m: '](' + _fix_insight_target(m.group(1), slugs) + ')', text)
+    text = re.sub(r'href="(/[^"#?]+\.html)"',
+                  lambda m: 'href="' + _fix_insight_target(m.group(1), slugs) + '"', text)
+    return text
+
+
 def main():
     articles = []
     parsed = []
+    all_slugs = {md.stem for md in SRC.glob('*.md')}
     for md in sorted(SRC.glob('*.md')):
         text = md.read_text(encoding='utf-8')
         meta, body = parse_frontmatter(text)
+        body = normalize_insight_links(body, all_slugs)
         slug = md.stem
         doc, a = build_article(meta, body, slug)
         parsed.append((doc, a))

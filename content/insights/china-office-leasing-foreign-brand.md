@@ -80,5 +80,5 @@ A: Many banks conduct a site verification before opening a corporate account. A 
 ## Related reading
 
 - [China Market Entry Guide for Foreign Brands](/guide-china-market-entry.html)
-- [Setting Up a WFOE in China for Import Businesses](/wfoe-china-import-setup.html)
+- [Setting Up a WFOE in China for Import Businesses](/insights/wfoe-china-import-setup.html)
 - [Glossary of China import terms](/glossary.html)

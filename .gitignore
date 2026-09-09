@@ -19,3 +19,7 @@ Thumbs.db
 
 # Local preview server logs
 *.log
+
+# Private client materials — never publish to the live site
+reply-draft-*.md
+client-drafts/

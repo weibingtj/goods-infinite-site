@@ -64,5 +64,5 @@ A: A credible 90-day window is realistic: the first 30 days for account setup an
 ## Related reading
 
 - [China Market Entry Guide for Foreign Brands](/guide-china-market-entry.html)
-- [Tmall Global Store Setup for Foreign Brands](/tmall-global-store-setup.html)
+- [Tmall Global Store Setup for Foreign Brands](/insights/tmall-global-store-setup.html)
 - [Glossary of China import & marketing terms](/glossary.html)

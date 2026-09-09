@@ -71,8 +71,8 @@ A: Yes, but not on day one. A phased approach works best: anchor one lead platfo
 
 ## Related reading
 
-- [WeChat Marketing for Foreign Brands in China](/wechat-marketing-foreign-brand-china.html)
-- [Xiaohongshu (RED) Marketing for Foreign Brands](/xiaohongshu-red-marketing-foreign-brand.html)
-- [Douyin China Marketing for Foreign Brands](/douyin-china-marketing-foreign-brand.html)
-- [Kuaishou Marketing for Foreign Brands in China](/kuaishou-lower-tier-city-foreign-brand.html)
+- [WeChat Marketing for Foreign Brands in China](/insights/wechat-marketing-foreign-brand-china.html)
+- [Xiaohongshu (RED) Marketing for Foreign Brands](/insights/xiaohongshu-red-marketing-foreign-brand.html)
+- [Douyin China Marketing for Foreign Brands](/insights/douyin-china-marketing-foreign-brand.html)
+- [Kuaishou Marketing for Foreign Brands in China](/insights/kuaishou-lower-tier-city-foreign-brand.html)
 - [China Market Entry Guide for Foreign Brands](/guide-china-market-entry.html)

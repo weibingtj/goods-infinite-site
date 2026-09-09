@@ -79,6 +79,6 @@ A: Via an EOR, often within 1–2 weeks. Via a new WFOE, only after incorporatio
 
 ## Related reading
 
-- [WFOE vs. Representative Office in China](/wfoe-vs-representative-office.html)
-- [Setting Up a WFOE in China for Import Businesses](/wfoe-china-import-setup.html)
+- [WFOE vs. Representative Office in China](/insights/wfoe-vs-representative-office.html)
+- [Setting Up a WFOE in China for Import Businesses](/insights/wfoe-china-import-setup.html)
 - [Glossary of China import terms](/glossary.html)

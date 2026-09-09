@@ -67,5 +67,5 @@ A: Yes, if your product fits value-conscious, family or regional-taste buyers ou
 ## Related reading
 
 - [China Market Entry Guide for Foreign Brands](/guide-china-market-entry.html)
-- [WeChat Marketing for Foreign Brands in China](/wechat-marketing-foreign-brand-china.html)
+- [WeChat Marketing for Foreign Brands in China](/insights/wechat-marketing-foreign-brand-china.html)
 - [Glossary of China import & marketing terms](/glossary.html)

@@ -68,5 +68,5 @@ A: Under SAMR's Internet Advertising Measures (effective 1 May 2023), any experi
 ## Related reading
 
 - [China Market Entry Guide for Foreign Brands](/guide-china-market-entry.html)
-- [Setting Up a WFOE in China for Import Businesses](/wfoe-china-import-setup.html)
+- [Setting Up a WFOE in China for Import Businesses](/insights/wfoe-china-import-setup.html)
 - [Glossary of China import & marketing terms](/glossary.html)

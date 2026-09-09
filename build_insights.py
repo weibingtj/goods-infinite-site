@@ -33,8 +33,12 @@ SITE = "https://www.goods-infinite.com"
 # ---------- IndexNow (instant Bing indexing) ----------
 # Bing pings are non-fatal: a failed ping must never break the build or the
 # daily automation. The key file must be served at the site root so Bing can
-# verify ownership. Generate once, keep stable.
-INDEXNOW_KEY = "42646d6ded56f9eab6f517f9c515738a"
+# verify ownership. IndexNow allows ONE key per host; do not publish a second
+# key file or strict engines (Seznam) will reject both.
+# This key was generated on Bing Webmaster Tools > IndexNow > Get Started.
+# Bing itself still requires the site to be verified in WMT before it accepts
+# submissions (returns 403 "verify the site using Bing Webmaster Tools").
+INDEXNOW_KEY = "b9356a3c25dc4081b6765843db9bcd0f"
 INDEXNOW_KEY_FILE = ROOT / (INDEXNOW_KEY + ".txt")
 INDEXNOW_HOST = "www.goods-infinite.com"
 # Each engine validates the key independently. api.indexnow.org and

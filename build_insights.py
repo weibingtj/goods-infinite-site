@@ -34,7 +34,7 @@ SITE = "https://www.goods-infinite.com"
 # Bing pings are non-fatal: a failed ping must never break the build or the
 # daily automation. The key file must be served at the site root so Bing can
 # verify ownership. Generate once, keep stable.
-INDEXNOW_KEY = "c0d2ddbde676263b6210b02459016d8b"
+INDEXNOW_KEY = "42646d6ded56f9eab6f517f9c515738a"
 INDEXNOW_KEY_FILE = ROOT / (INDEXNOW_KEY + ".txt")
 INDEXNOW_HOST = "www.goods-infinite.com"
 INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
@@ -648,12 +648,62 @@ def write_indexnow_key_file():
     INDEXNOW_KEY_FILE.write_text(INDEXNOW_KEY, encoding='utf-8')
     print('wrote IndexNow key file', INDEXNOW_KEY_FILE.name)
 
+INDEXNOW_STATE = ROOT / ".indexnow-state.json"
+
+
+def _file_digest(path):
+    """Short content hash used to detect which pages actually changed."""
+    import hashlib
+    try:
+        return hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+    except OSError:
+        return ''
+
+
+def changed_urls(articles):
+    """Return only URLs whose file content changed since the last successful
+    IndexNow submission.
+
+    Submitting the whole site on every build is against the spirit of the
+    protocol ("notify us when something changed") and can look like spam to a
+    host with little IndexNow history. When the key fails validation we keep
+    the old state file, so every changed page is retried on the next build.
+    """
+    tracked = [(ROOT / p, f'{SITE}/{p}') for p, _, _ in STATIC_PAGES]
+    for a in articles:
+        tracked.append((OUT / f"{a['slug']}.html", f"{SITE}/insights/{a['slug']}.html"))
+
+    try:
+        prev = json.loads(INDEXNOW_STATE.read_text(encoding='utf-8'))
+    except Exception:
+        prev = {}
+
+    now, selected = {}, []
+    for path, url in tracked:
+        digest = _file_digest(path)
+        if not digest:
+            continue
+        now[url] = digest
+        if prev.get(url) != digest:
+            selected.append(url)
+    return selected, now
+
+
+def save_indexnow_state(state):
+    try:
+        INDEXNOW_STATE.write_text(json.dumps(state, indent=0, sort_keys=True),
+                                  encoding='utf-8')
+    except Exception as e:
+        print('could not save IndexNow state:', e)
+
+
 def ping_indexnow(url_list):
     """Notify Bing (and any IndexNow-participating engine) of changed URLs.
     Non-fatal: any network/HTTP error is logged and swallowed so the build
-    and the daily automation keep running regardless."""
+    and the daily automation keep running regardless.
+    Returns True when the engines accepted the submission."""
     if not url_list:
-        return
+        return True
     payload = json.dumps({
         "host": INDEXNOW_HOST,
         "key": INDEXNOW_KEY,
@@ -669,15 +719,20 @@ def ping_indexnow(url_list):
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
             print(f'IndexNow ping -> HTTP {r.getcode()} ({len(url_list)} urls)')
+            return True
     except urllib.error.HTTPError as e:
         body = e.read().decode('utf-8', 'ignore')[:300]
         print(f'IndexNow ping -> HTTP {e.code} {e.reason} (non-fatal) {body}')
         if e.code == 403:
-            print('   -> ownership NOT proven. Most common cause: the edge '
-                  f'(Cloudflare) blocks the validator\'s request. Check https://{INDEXNOW_HOST}/'
-                  f'{INDEXNOW_KEY}.txt returns 200 for a non-browser client too.')
+            print('   -> key not accepted. Verify https://'
+                  f'{INDEXNOW_HOST}/{INDEXNOW_KEY}.txt is publicly readable,')
+            print('      then rotate the key and submit a single URL first.')
+            print('      If it keeps failing, enable Cloudflare Crawler Hints')
+            print('      (Speed > Optimization > Crawler Hints) as the fallback.')
+        return False
     except Exception as e:
         print(f'IndexNow ping skipped: {e} (non-fatal)')
+        return False
 
 
 def verify_indexnow_key_file():
@@ -755,10 +810,9 @@ def main():
     # (static pages + all insights) so new and updated pages index fast.
     write_indexnow_key_file()
     verify_indexnow_key_file()
-    urls = [f'{SITE}/{p}' for p, _, _ in STATIC_PAGES]
-    for a in articles:
-        urls.append(f'{SITE}/insights/{a["slug"]}.html')
-    ping_indexnow(urls)
+    urls, state = changed_urls(articles)
+    if ping_indexnow(urls):
+        save_indexnow_state(state)
 
 if __name__ == '__main__':
     main()

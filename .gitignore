@@ -23,3 +23,6 @@ Thumbs.db
 # Private client materials — never publish to the live site
 reply-draft-*.md
 client-drafts/
+
+# IndexNow per-URL state (local only, rebuilt when needed)
+.indexnow-state.json

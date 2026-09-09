@@ -37,7 +37,19 @@ SITE = "https://www.goods-infinite.com"
 INDEXNOW_KEY = "42646d6ded56f9eab6f517f9c515738a"
 INDEXNOW_KEY_FILE = ROOT / (INDEXNOW_KEY + ".txt")
 INDEXNOW_HOST = "www.goods-infinite.com"
-INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
+# Each engine validates the key independently. api.indexnow.org and
+# bing.com/indexnow are the same Bing backend; Yandex, Seznam, Naver, Yep and
+# Amazonbot accept the same payload at their own endpoints. We ping all of them
+# because one engine rejecting the key must not stop the others.
+INDEXNOW_ENDPOINTS = [
+    "https://api.indexnow.org/indexnow",
+    "https://www.bing.com/indexnow",
+    "https://yandex.com/indexnow",
+    "https://search.seznam.cz/indexnow",
+    "https://searchadvisor.naver.com/indexnow",
+    "https://indexnow.yep.com/indexnow",
+    "https://indexnow.amazonbot.amazon/indexnow",
+]
 
 # Author (E-E-A-T). Add LinkedIn etc. to SAMEAS for stronger entity signals.
 AUTHOR = {
@@ -710,29 +722,34 @@ def ping_indexnow(url_list):
         "keyLocation": f"https://{INDEXNOW_HOST}/{INDEXNOW_KEY}.txt",
         "urlList": url_list,
     }).encode('utf-8')
-    req = urllib.request.Request(
-        INDEXNOW_ENDPOINT,
-        data=payload,
-        headers={"Content-Type": "application/json; charset=utf-8"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=15) as r:
-            print(f'IndexNow ping -> HTTP {r.getcode()} ({len(url_list)} urls)')
-            return True
-    except urllib.error.HTTPError as e:
-        body = e.read().decode('utf-8', 'ignore')[:300]
-        print(f'IndexNow ping -> HTTP {e.code} {e.reason} (non-fatal) {body}')
-        if e.code == 403:
-            print('   -> key not accepted. Verify https://'
-                  f'{INDEXNOW_HOST}/{INDEXNOW_KEY}.txt is publicly readable,')
-            print('      then rotate the key and submit a single URL first.')
-            print('      If it keeps failing, enable Cloudflare Crawler Hints')
-            print('      (Speed > Optimization > Crawler Hints) as the fallback.')
-        return False
-    except Exception as e:
-        print(f'IndexNow ping skipped: {e} (non-fatal)')
-        return False
+    accepted = []
+    rejected = []
+    for endpoint in INDEXNOW_ENDPOINTS:
+        req = urllib.request.Request(
+            endpoint,
+            data=payload,
+            headers={"Content-Type": "application/json; charset=utf-8"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=15) as r:
+                accepted.append(endpoint)
+                print(f'  {endpoint} -> HTTP {r.getcode()}')
+        except urllib.error.HTTPError as e:
+            rejected.append(endpoint)
+            print(f'  {endpoint} -> HTTP {e.code} {e.reason}')
+        except Exception as e:
+            rejected.append(endpoint)
+            print(f'  {endpoint} -> skipped ({e})')
+    print(f'IndexNow: {len(accepted)} engine(s) accepted {len(url_list)} URL(s), '
+          f'{len(rejected)} rejected')
+    if not accepted and any('bing' in u for u in rejected):
+        print('   Bing rejects this key even though other engines accept it.')
+        print('   Two fixes that do not depend on the key: verify the site in')
+        print('   Bing Webmaster Tools, and turn on Cloudflare Crawler Hints')
+        print('   (Speed > Optimization > Crawler Hints) so Cloudflare itself')
+        print('   pushes IndexNow signals on your behalf.')
+    return bool(accepted)
 
 
 def verify_indexnow_key_file():

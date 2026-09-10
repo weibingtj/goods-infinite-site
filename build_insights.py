@@ -663,7 +663,39 @@ def write_indexnow_key_file():
     """Publish the IndexNow key at the site root so Bing can verify ownership.
     The file must be reachable at https://<host>/<key>.txt and contain only the key."""
     INDEXNOW_KEY_FILE.write_text(INDEXNOW_KEY, encoding='utf-8')
+    sync_key_headers_rule()
     print('wrote IndexNow key file', INDEXNOW_KEY_FILE.name)
+
+
+def sync_key_headers_rule():
+    """Keep a short-cache rule for the active key file in `_headers`.
+
+    Without it the CDN can keep serving a rotated-out key file for days
+    (observed: `Cache-Control: public, s-maxage=604800`), which leaves two keys
+    resolvable on one host. IndexNow requires one key per host, so strict
+    validators (Bing, Yandex, Seznam) then reject every submission.
+
+    Idempotent: any rule for a previously active key file is dropped first.
+    """
+    path = ROOT / '_headers'
+    if not path.exists():
+        return
+    rule = (f'/{INDEXNOW_KEY}.txt\n'
+            '  Cache-Control: public, max-age=0, must-revalidate\n')
+    lines = path.read_text(encoding='utf-8').splitlines(keepends=True)
+    out, i, removed = [], 0, 0
+    while i < len(lines):
+        line = lines[i]
+        if re.match(r'^/[0-9a-f]{32}\.txt\s*$', line):
+            removed += 1
+            i += 1
+            while i < len(lines) and lines[i][:1] in (' ', '\t'):
+                i += 1
+            continue
+        out.append(line)
+        i += 1
+    path.write_text(''.join(out).rstrip('\n') + '\n\n' + rule, encoding='utf-8')
+    print(f'synced _headers key rule (dropped {removed} stale rule(s))')
 
 INDEXNOW_STATE = ROOT / ".indexnow-state.json"
 

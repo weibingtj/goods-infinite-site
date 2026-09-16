@@ -10,3 +10,8 @@
 # 301, and adding a reverse rule forms an infinite redirect loop
 # (ERR_TOO_MANY_REDIRECTS in browsers).
 /insights/1210-vs-9610-0110.html  /insights/1210-vs-9610-vs-0110.html  301
+
+# Upgrade the author page to a canonical, clean entity URL. The old
+# /author-bing.html is 301'd to /author/bing-wei/ so indexed/linked versions
+# pass equity to the new profile (GEO anchor: Bing Wei = GOODSINFINITE).
+/author-bing.html  /author/bing-wei/  301

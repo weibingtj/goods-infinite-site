@@ -59,10 +59,79 @@ INDEXNOW_ENDPOINTS = [
 # Author (E-E-A-T). Add LinkedIn etc. to SAMEAS for stronger entity signals.
 AUTHOR = {
     "name": "Bing Wei",
-    "url": SITE + "/author-bing.html",
-    "title": "Operations Director",
+    "url": SITE + "/author/bing-wei/",
+    "title": "China Market Entry & Cross-Border Commerce Specialist",
     "sameas": ["https://www.linkedin.com/in/bing-wei-0966283a7"],
 }
+# Expertise tags rendered on /author/bing-wei/ and used to reinforce the
+# Bing Wei <-> GOODSINFINITE <-> China Market Entry entity for GEO. Each tag
+# links to the most relevant pillar/article, so the profile also pushes
+# internal link equity back into the site.
+AUTHOR_TOPICS = [
+    ("GOODSINFINITE", "/about.html"),
+    ("China Market Entry", "/guide-china-market-entry.html"),
+    ("1210 Bonded Import", "/insights/what-is-1210-bonded-import.html"),
+    ("Bonded Import", "/bonded-warehouse-customs.html"),
+    ("Hong Kong Trading Entity", "/insights/hong-kong-entity-china-import.html"),
+    ("Customs", "/bonded-warehouse-customs.html"),
+    ("China E-commerce", "/ecommerce-operations.html"),
+    ("Tmall Global", "/insights/tmall-global-store-setup.html"),
+    ("Douyin", "/insights/douyin-china-marketing-foreign-brand.html"),
+    ("Fulfillment", "/bonded-warehouse-customs.html"),
+]
+
+# NAV / FOOTER variants with ROOT-ABSOLUTE links, for the profile page which
+# lives in a subfolder (/author/bing-wei/). The default NAV uses ../ relative
+# paths that would break one directory level down.
+AUTHOR_NAV = """
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo"><svg class="brand-mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M6 14 C6 10 10 10 14 14 C18 18 22 18 22 14 C22 10 18 10 14 14 C10 18 6 18 6 14 Z" fill="none" stroke="#0b4f9c" stroke-width="3" stroke-linecap="round"/><path d="M14 18 L14 9 M11 12 L14 8.5 L17 12" fill="none" stroke="#1b8a5a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>GOODS<b>INFINITE</b></a>
+    <nav class="nav-links">
+      <a href="/enter-china.html">Enter China</a>
+      <a href="/bonded-warehouse-customs.html">Bonded &amp; Customs</a>
+      <a href="/ecommerce-operations.html">E-commerce Ops</a>
+      <a href="/china-marketing.html">China Marketing</a>
+      <a href="/source-from-china.html">Source from China</a>
+      <a href="/insights/index.html">Insights</a>
+      <a href="/guide-china-market-entry.html">Guide</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/author/bing-wei/">Author</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="btn">Contact</a>
+    </nav>
+    <button class="hamburger" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/enter-china.html">Enter China</a>
+    <a href="/bonded-warehouse-customs.html">Bonded &amp; Customs</a>
+    <a href="/ecommerce-operations.html">E-commerce Ops</a>
+    <a href="/china-marketing.html">China Marketing</a>
+    <a href="/source-from-china.html">Source from China</a>
+    <a href="/insights/index.html">Insights</a>
+    <a href="/guide-china-market-entry.html">Guide</a>
+    <a href="/glossary.html">Glossary</a>
+    <a href="/author/bing-wei/">Author</a>
+    <a href="/pricing.html">Pricing</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+</header>
+"""
+AUTHOR_FOOTER = """
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div><div class="logo" style="color:#fff"><svg class="brand-mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M6 14 C6 10 10 10 14 14 C18 18 22 18 22 14 C22 10 18 10 14 14 C10 18 6 18 6 14 Z" fill="none" stroke="#0b4f9c" stroke-width="3" stroke-linecap="round"/><path d="M14 18 L14 9 M11 12 L14 8.5 L17 12" fill="none" stroke="#1b8a5a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>GOODS<b style="color:#fff">INFINITE</b></div><p class="foot-about">GOODSINFINITE TRADE LIMITED — your operational launchpad into the China market.</p></div>
+      <div><h4>Services</h4><a href="/enter-china.html">Enter China</a><a href="/bonded-warehouse-customs.html">Bonded &amp; Customs</a><a href="/ecommerce-operations.html">E-commerce Ops</a><a href="/china-marketing.html">China Marketing</a></div>
+      <div><h4>Company</h4><a href="/about.html">About</a><a href="/author/bing-wei/">Author</a><a href="/case-studies.html">Case Studies</a><a href="/pricing.html">Pricing</a><a href="/contact.html">Contact</a></div>
+      <div><h4>Connect</h4><a href="mailto:goodsinfinite@goods-infinite.com">goodsinfinite@goods-infinite.com</a><a href="/contact.html">Book a call</a><a href="/llms.txt">llms.txt</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 GOODSINFINITE TRADE LIMITED. All rights reserved.</span><span>HK: Room P, 4/F, Yick Choi Centre, 72 Hoi Yuen Road, Kwun Tong, Kowloon, Hongkong, China · Mainland China Office: 12/F, Mass-Innovation Building, 3699 Xinhua Road, Binhai New Area, Tianjin, China</span></div>
+  </div>
+</footer>
+"""
 
 # Authority references rendered on every article (GEO: external citations to
 # trusted sources lift AI citation rate; Princeton study shows up to +40%).
@@ -160,7 +229,7 @@ FOOTER = """
     <div class="foot-grid">
       <div><div class="logo" style="color:#fff"><svg class="brand-mark" viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M6 14 C6 10 10 10 14 14 C18 18 22 18 22 14 C22 10 18 10 14 14 C10 18 6 18 6 14 Z" fill="none" stroke="#0b4f9c" stroke-width="3" stroke-linecap="round"/><path d="M14 18 L14 9 M11 12 L14 8.5 L17 12" fill="none" stroke="#1b8a5a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>GOODS<b style="color:#fff">INFINITE</b></div><p class="foot-about">GOODSINFINITE TRADE LIMITED — your operational launchpad into the China market.</p></div>
       <div><h4>Services</h4><a href="../enter-china.html">Enter China</a><a href="../bonded-warehouse-customs.html">Bonded &amp; Customs</a><a href="../ecommerce-operations.html">E-commerce Ops</a><a href="../china-marketing.html">China Marketing</a></div>
-      <div><h4>Company</h4><a href="../about.html">About</a><a href="../case-studies.html">Case Studies</a><a href="../pricing.html">Pricing</a><a href="../contact.html">Contact</a></div>
+      <div><h4>Company</h4><a href="../about.html">About</a><a href="/author/bing-wei/">Author</a><a href="../case-studies.html">Case Studies</a><a href="../pricing.html">Pricing</a><a href="../contact.html">Contact</a></div>
       <div><h4>Connect</h4><a href="mailto:goodsinfinite@goods-infinite.com">goodsinfinite@goods-infinite.com</a><a href="../contact.html">Book a call</a><a href="../llms.txt">llms.txt</a></div>
     </div>
     <div class="foot-bottom"><span>© 2026 GOODSINFINITE TRADE LIMITED. All rights reserved.</span><span>HK: Room P, 4/F, Yick Choi Centre, 72 Hoi Yuen Road, Kwun Tong, Kowloon, Hongkong, China · Mainland China Office: 12/F, Mass-Innovation Building, 3699 Xinhua Road, Binhai New Area, Tianjin, China</span></div>
@@ -421,7 +490,7 @@ def build_article(meta, body, slug):
     <p class="crumbs"><a href="/">Home</a> / <a href="/insights/index.html">Insights</a> / {html.escape(canon)}</p>
     <h1>{html.escape(title)}</h1>
     <p class="lead">{html.escape(excerpt)}</p>
-    <p class="muted">Published {html.escape(date)} · Last updated {html.escape(now)} · By <a href="../author-bing.html">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
+    <p class="muted">Published {html.escape(date)} · Last updated {html.escape(now)} · By <a href="{AUTHOR['url']}">{html.escape(AUTHOR['name'])}</a>, {html.escape(AUTHOR['title'])}</p>
   </div>
 </section>
 <section>
@@ -607,6 +676,170 @@ def build_pillar_related(pillar_file, articles, limit=6):
     path.write_text(html_text, encoding='utf-8')
     print('pillar down-link ->', pillar_file, f'({len(picks)} insights)')
 
+def build_author_page(articles):
+    """Generate the canonical Bing Wei expert profile at /author/bing-wei/.
+
+    This is the GEO anchor that lets generative engines converge on
+    Bing Wei = GOODSINFINITE = China Market Entry:
+      - every article byline -> /author/bing-wei/  (reverse link, done in build_article)
+      - this page lists every insight, each linking back out (forward mesh)
+      - a Person @graph (with worksFor GOODSINFINITE) is embedded in <head>
+    """
+    out_dir = ROOT / "author" / "bing-wei"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    groups = {c: [] for c in CLUSTER_ORDER}
+    for a in articles:
+        groups.setdefault(a['canon'], []).append(a)
+    blocks = []
+    for c in CLUSTER_ORDER:
+        items = sorted(groups.get(c, []), key=lambda x: x['date'], reverse=True)
+        if not items:
+            continue
+        cards = []
+        for a in items:
+            cards.append(f"""      <a class="card insight-card" href="/insights/{a['slug']}.html">
+        <span class="tag">{html.escape(a['canon'])}</span>
+        <h3>{html.escape(a['title'])}</h3>
+        <p class="muted">{html.escape(a['excerpt'])}</p>
+        <span class="more">Read →</span>
+      </a>""")
+        blocks.append(f"""    <div class="cluster">
+      <h2>{html.escape(c)}</h2>
+      <div class="grid cols-2">
+{chr(10).join(cards)}
+      </div>
+    </div>""")
+    topic_chips = "\n".join(
+        f'      <a href="{u}" style="display:inline-block;margin:6px 6px 0 0;padding:7px 14px;border:1px solid var(--line);border-radius:20px;font-size:13px;font-weight:600;color:var(--brand);text-decoration:none;background:#fff">{t}</a>'
+        for t, u in AUTHOR_TOPICS)
+    total = len(articles)
+    person_ld = ('<script type="application/ld+json">\n' + json.dumps({
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": SITE + "/author/bing-wei/#person",
+                "name": AUTHOR["name"],
+                "givenName": "Ben",
+                "familyName": "Wei",
+                "jobTitle": AUTHOR["title"],
+                "url": SITE + "/author/bing-wei/",
+                "image": SITE + "/assets/images/og-about.webp",
+                "email": "goodsinfinite@goods-infinite.com",
+                "description": ("China Market Entry & Cross-Border Commerce Specialist at "
+                                "GOODSINFINITE TRADE LIMITED — a Hong Kong trading entity and importer "
+                                "of record that helps overseas brands enter China via 1210 bonded "
+                                "import, customs clearance and China e-commerce operations. Author of "
+                                "the GOODSINFINITE Insights guides."),
+                "knowsAbout": [
+                    "GOODSINFINITE TRADE LIMITED", "China market entry", "1210 cross-border bonded import",
+                    "Bonded import", "Hong Kong trading entity", "Customs clearance",
+                    "China e-commerce operations", "Tmall Global", "Douyin cross-border", "Fulfillment",
+                    "Cross-border e-commerce", "Bonded warehousing"
+                ],
+                "worksFor": {"@id": SITE + "/#organization"},
+                "sameAs": AUTHOR["sameas"],
+            },
+            {
+                "@type": "Organization",
+                "@id": SITE + "/#organization",
+                "name": "GOODSINFINITE TRADE LIMITED",
+                "url": SITE + "/",
+                "alternateName": "無商國際貿易有限公司",
+            }
+        ]
+    }, ensure_ascii=False, indent=2) + '\n</script>')
+    doc = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bing Wei — China Market Entry &amp; Cross-Border Commerce Specialist | GOODSINFINITE</title>
+<meta name="description" content="Bing Wei is the China Market Entry & Cross-Border Commerce Specialist at GOODSINFINITE TRADE LIMITED — covering 1210 bonded import, Hong Kong trading entity, customs, China e-commerce, Tmall Global, Douyin and fulfillment.">
+<link rel="canonical" href="{SITE}/author/bing-wei/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
+<meta property="og:title" content="Bing Wei — China Market Entry & Cross-Border Commerce Specialist">
+<meta property="og:description" content="Bing Wei is the China Market Entry & Cross-Border Commerce Specialist at GOODSINFINITE TRADE LIMITED, author of the GOODSINFINITE Insights guides.">
+<meta property="og:url" content="{SITE}/author/bing-wei/">
+<meta property="og:image" content="{SITE}/assets/images/og-about.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bing Wei — China Market Entry & Cross-Border Commerce Specialist">
+<meta name="twitter:description" content="Bing Wei — China Market Entry & Cross-Border Commerce Specialist at GOODSINFINITE TRADE LIMITED.">
+<meta name="twitter:image" content="{SITE}/assets/images/og-about.webp">
+<link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260828-2">
+{person_ld}
+{GA_SNIPPET}</head>
+<body>
+{AUTHOR_NAV}
+<section class="pagehero">
+  <div class="container">
+    <p class="crumbs"><a href="/">Home</a> / Author</p>
+    <h1>Bing Wei</h1>
+    <p class="lead">China Market Entry &amp; Cross-Border Commerce Specialist — GOODSINFINITE TRADE LIMITED</p>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="card" style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-bottom:24px">
+      <div style="width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,#0b4f9c,#1b8a5a);color:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;flex:0 0 auto">BW</div>
+      <div>
+        <h3 style="margin-bottom:6px">China Market Entry &amp; Cross-Border Commerce Specialist</h3>
+        <p class="muted">GOODSINFINITE TRADE LIMITED · Hong Kong trading entity &amp; importer of record</p>
+      </div>
+    </div>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>The operator behind GOODSINFINITE</h3>
+        <p>Bing Wei runs the operational side of GOODSINFINITE — not a distant advisory desk. As China Market Entry &amp; Cross-Border Commerce Specialist, he leads the Hong Kong trading entity, 1210 bonded import, customs clearance and the company's China e-commerce operations for overseas brands entering the market.</p>
+        <p>His background is hands-on: customs brokerage, international supply chain, bonded warehousing and cross-border fulfilment — the parts of market entry that decide whether a launch actually ships.</p>
+      </div>
+      <div class="card">
+        <h3>Track record</h3>
+        <ul>
+          <li>Scaled a Douyin cross-border livestream store to <strong>national TOP 6</strong> in cross-border e-commerce within five months — the only northern-China store in the TOP 10 that year.</li>
+          <li>Operates live cross-border storefronts including Tmall Global “globalgo海外专营店” and Kuaishou “自贸环球购海外旗舰店”.</li>
+          <li>Direct experience across 1210 bonded import, Hong Kong trading entity structuring, customs clearance, NMPA/CCC compliance and China e-commerce operations.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:20px">
+      <h3>Areas of expertise</h3>
+      <p class="muted">The topics Bing Wei writes about and operates — each links to the relevant GOODSINFINITE guide.</p>
+      <div style="margin-top:12px">
+{topic_chips}
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">Insights</p><h2>Articles by Bing Wei ({total})</h2></div>
+{chr(10).join(blocks)}
+    <p style="margin-top:18px"><a class="btn btn-green" href="/insights/index.html">Browse all Insights →</a></p>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="ctaband">
+      <h2>Got a China-entry question for Bing's team?</h2>
+      <p>Book a free 30-minute call and get a concrete, operational plan.</p>
+      <a href="/contact.html" class="btn btn-green">Book a call</a>
+    </div>
+  </div>
+</section>
+{AUTHOR_FOOTER + ORG_LD}
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
+"""
+    (out_dir / "index.html").write_text(doc, encoding='utf-8')
+    print('built author/bing-wei/index.html', f'({total} insights linked)')
+
+
 STATIC_PAGES = [
     ("", "weekly", "1.0"),
     ("enter-china.html", "monthly", "0.9"),
@@ -617,7 +850,7 @@ STATIC_PAGES = [
     ("pricing.html", "monthly", "0.8"),
     ("case-studies.html", "monthly", "0.7"),
     ("about.html", "yearly", "0.6"),
-    ("author-bing.html", "yearly", "0.5"),
+    ("author/bing-wei/index.html", "monthly", "0.8"),
     ("contact.html", "yearly", "0.7"),
     ("guide-china-market-entry.html", "monthly", "0.9"),
     ("glossary.html", "monthly", "0.7"),
@@ -642,6 +875,8 @@ def build_sitemap(articles):
     doc = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "\n".join(urls) + "\n</urlset>\n")
+    # use the canonical (clean) URL for the author profile in the sitemap
+    doc = doc.replace(SITE + "/author/bing-wei/index.html", SITE + "/author/bing-wei/")
     (ROOT / "sitemap.xml").write_text(doc, encoding='utf-8')
     print('built sitemap.xml')
 
@@ -735,6 +970,11 @@ def changed_urls(articles):
         now[url] = digest
         if prev.get(url) != digest:
             selected.append(url)
+    # normalise the author profile URL to its canonical (clean) form
+    AUTH_RAW = SITE + "/author/bing-wei/index.html"
+    AUTH_CLEAN = SITE + "/author/bing-wei/"
+    now = {k.replace(AUTH_RAW, AUTH_CLEAN): v for k, v in now.items()}
+    selected = [u.replace(AUTH_RAW, AUTH_CLEAN) for u in selected]
     return selected, now
 
 
@@ -858,6 +1098,9 @@ def main():
         # Phase 3 down-links: inject related insights into each pillar page
         for pillar_file in PILLAR_CLUSTERS:
             build_pillar_related(pillar_file, articles)
+        # Canonical Bing Wei expert profile (/author/bing-wei/) — lists every
+        # insight and is the GEO anchor tying Bing Wei <-> GOODSINFINITE.
+        build_author_page(articles)
     else:
         print('no articles found in', SRC)
     # IndexNow: publish the key file, then notify Bing of every known URL

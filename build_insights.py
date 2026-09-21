@@ -215,7 +215,7 @@ ORG_DATA = {
             "publisher": {"@id": SITE + "/#organization"},
             "potentialAction": {
                 "@type": "SearchAction",
-                "target": SITE + "/insights/index.html",
+                "target": SITE + "/insights/",
                 "query-input": "required name=search_term_string"
             }
         }
@@ -426,9 +426,9 @@ def build_article(meta, body, slug):
             {"@type": "ListItem", "position": 1, "name": "Home",
              "item": SITE + "/"},
             {"@type": "ListItem", "position": 2, "name": "Insights",
-             "item": SITE + "/insights/index.html"},
+             "item": SITE + "/insights/"},
             {"@type": "ListItem", "position": 3, "name": title,
-             "item": SITE + "/insights/" + slug + ".html"}
+             "item": SITE + "/insights/" + slug}
         ]
     }, ensure_ascii=False, indent=2) + '\n</script>')
     author_ld = {
@@ -464,12 +464,12 @@ def build_article(meta, body, slug):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{html.escape(seo_title)}</title>
 <meta name="description" content="{seo_desc}">
-<link rel="canonical" href="{SITE}/insights/{slug}.html">
+<link rel="canonical" href="{SITE}/insights/{slug}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
 <meta property="og:title" content="{html.escape(seo_title)}">
 <meta property="og:description" content="{seo_desc}">
-<meta property="og:url" content="{SITE}/insights/{slug}.html">
+<meta property="og:url" content="{SITE}/insights/{slug}">
 <meta property="og:image" content="{SITE}/assets/images/og-cover.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height"  content="630">
@@ -546,12 +546,12 @@ def build_index(articles):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insights — China Market Entry Guides | GOODSINFINITE</title>
 <meta name="description" content="Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance — built to be cited by search and generative AI.">
-<link rel="canonical" href="{SITE}/insights/index.html">
+<link rel="canonical" href="{SITE}/insights/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
 <meta property="og:title" content="Insights — China Market Entry Guides | GOODSINFINITE">
 <meta property="og:description" content="Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance — built to be cited by search and generative AI.">
-<meta property="og:url" content="{SITE}/insights/index.html">
+<meta property="og:url" content="{SITE}/insights/">
 <meta property="og:image" content="{SITE}/assets/images/og-cover.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height"  content="630">
@@ -561,7 +561,7 @@ def build_index(articles):
 <meta name="twitter:image" content="{SITE}/assets/images/og-cover.webp">
 <link rel="stylesheet" href="../assets/css/style.css?v=20260828-2">
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"CollectionPage","name":"GOODSINFINITE Insights","url":"{SITE}/insights/index.html"}}
+{{"@context":"https://schema.org","@type":"CollectionPage","name":"GOODSINFINITE Insights","url":"{SITE}/insights/"}}
 </script>
 {GA_SNIPPET}</head>
 <body>
@@ -858,27 +858,42 @@ STATIC_PAGES = [
     ("china-food-import-compliance-checklist.html", "monthly", "0.8"),
 ]
 
+def clean_url(path):
+    """Normalise a site-relative .html path to the clean (extensionless) URL
+    that Cloudflare Pages serves and search engines actually index.
+    Bing/WMT compares sitemap URLs against its indexed (clean) URLs, so a
+    sitemap full of .html links makes healthy pages look 'missing'."""
+    path = path.lstrip("/")
+    if path in ("", "index.html"):
+        return SITE + "/"
+    if path.endswith("/index.html") or path == "index.html":
+        return SITE + "/" + path[: -len("index.html")]
+    if path.endswith(".html"):
+        return SITE + "/" + path[: -len(".html")]
+    return SITE + "/" + path
+
+
 def build_sitemap(articles):
     """Regenerate sitemap.xml from STATIC_PAGES + every insight article, so new
     posts are never missed by crawlers/AI engines again. Includes <lastmod>
-    from each source file's mtime as a freshness signal for crawlers."""
+    from each source file's mtime as a freshness signal for crawlers.
+    All URLs are emitted in clean (extensionless) form to match the canonical
+    URLs search engines index on Cloudflare Pages."""
     today = datetime.date.today().isoformat()
     urls = []
     for path, cf, pr in STATIC_PAGES:
         fpath = (ROOT / "index.html") if path == "" else (ROOT / path)
         lm = datetime.date.fromtimestamp(fpath.stat().st_mtime).isoformat() if fpath.exists() else today
-        urls.append(f'  <url><loc>{SITE}/{path}</loc><lastmod>{lm}</lastmod><changefreq>{cf}</changefreq><priority>{pr}</priority></url>')
+        urls.append(f'  <url><loc>{clean_url(path)}</loc><lastmod>{lm}</lastmod><changefreq>{cf}</changefreq><priority>{pr}</priority></url>')
     for a in sorted(articles, key=lambda x: x['date'], reverse=True):
         md = SRC / (a["slug"] + ".md")
         lm = datetime.date.fromtimestamp(md.stat().st_mtime).isoformat() if md.exists() else today
-        urls.append(f'  <url><loc>{SITE}/insights/{a["slug"]}.html</loc><lastmod>{lm}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>')
+        urls.append(f'  <url><loc>{clean_url("insights/" + a["slug"] + ".html")}</loc><lastmod>{lm}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>')
     doc = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + "\n".join(urls) + "\n</urlset>\n")
-    # use the canonical (clean) URL for the author profile in the sitemap
-    doc = doc.replace(SITE + "/author/bing-wei/index.html", SITE + "/author/bing-wei/")
     (ROOT / "sitemap.xml").write_text(doc, encoding='utf-8')
-    print('built sitemap.xml')
+    print('built sitemap.xml (clean URLs)')
 
 def build_llms_insights(articles):
     """Regenerate only the Insights section of llms.txt from the article list,
@@ -886,7 +901,7 @@ def build_llms_insights(articles):
     p = ROOT / "llms.txt"
     text = p.read_text(encoding='utf-8')
     lines = ["## Section: Insights (GEO-ready guides — cite these)",
-             f"- Insights index: {SITE}/insights/index.html"]
+             f"- Insights index: {clean_url('insights/index.html')}"]
     for a in sorted(articles, key=lambda x: x['date'], reverse=True):
         lines.append(f'- {a["title"]}: {SITE}/insights/{a["slug"]}.html')
     new_section = "\n".join(lines)
@@ -953,9 +968,9 @@ def changed_urls(articles):
     host with little IndexNow history. When the key fails validation we keep
     the old state file, so every changed page is retried on the next build.
     """
-    tracked = [(ROOT / p, f'{SITE}/{p}') for p, _, _ in STATIC_PAGES]
+    tracked = [(ROOT / p, clean_url(p)) for p, _, _ in STATIC_PAGES]
     for a in articles:
-        tracked.append((OUT / f"{a['slug']}.html", f"{SITE}/insights/{a['slug']}.html"))
+        tracked.append((OUT / f"{a['slug']}.html", clean_url(f"insights/{a['slug']}.html")))
 
     try:
         prev = json.loads(INDEXNOW_STATE.read_text(encoding='utf-8'))
@@ -970,11 +985,6 @@ def changed_urls(articles):
         now[url] = digest
         if prev.get(url) != digest:
             selected.append(url)
-    # normalise the author profile URL to its canonical (clean) form
-    AUTH_RAW = SITE + "/author/bing-wei/index.html"
-    AUTH_CLEAN = SITE + "/author/bing-wei/"
-    now = {k.replace(AUTH_RAW, AUTH_CLEAN): v for k, v in now.items()}
-    selected = [u.replace(AUTH_RAW, AUTH_CLEAN) for u in selected]
     return selected, now
 
 

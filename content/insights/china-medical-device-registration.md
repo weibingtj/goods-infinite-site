@@ -86,6 +86,20 @@ We bundle the regulatory and logistics work so a brand enters cleanly:
 - **Dossier and agent coordination.** We pre-review labels and assemble NMPA-ready dossiers and coordinate the China registration agent.
 - **Bonded fulfilment across five cities** (Tianjin, Shanghai, Ningbo, Guangzhou, Qingdao) for rapid domestic delivery once clearance is granted.
 
+## Related China compliance & registration guides
+
+Medical devices sit inside a wider web of China pre-market controls. These guides cover the adjacent lanes a device brand usually needs at the same time:
+
+- [China product registration roadmap for foreign brands](https://www.goods-infinite.com/insights/china-product-registration-foreign-brands.html) — how the registration lanes differ across devices, cosmetics, food and supplements
+- [Cosmetics into China — NMPA filing & registration](https://www.goods-infinite.com/insights/cosmetics-into-china-nmpa.html) — the parallel NMPA route for beauty and skincare
+- [China import compliance: CCC & NMPA](https://www.goods-infinite.com/insights/china-import-compliance-ccc-nmpa.html) — compulsory certification that overlaps with device approval
+- [Health food registration — Blue Hat (蓝帽)](https://www.goods-infinite.com/insights/china-health-food-registration-blue-hat.html) — the separate registration track for supplements
+- [GACC food facility registration for imports](https://www.goods-infinite.com/insights/gacc-food-registration.html) — overseas facility registration required before food ships
+- [China import product labelling requirements](https://www.goods-infinite.com/insights/china-import-product-labelling-requirements.html) — label and language rules that apply to every regulated SKU
+- [China import licence & permit overview](https://www.goods-infinite.com/insights/china-import-license.html) — which products need an import licence before clearance
+- [China trademark registration for foreign brands](https://www.goods-infinite.com/insights/china-trademark-registration-foreign-brand.html) — protect the brand before it enters
+- [Prohibited & restricted goods for China import](https://www.goods-infinite.com/insights/prohibited-restricted-goods-china.html) — screen the portfolio before you plan the launch clock
+
 > Enter China the way compliant device brands do: map the class, secure the right registration or filing, and let a qualified importer carry the shipment across the border.
 
 ## FAQ

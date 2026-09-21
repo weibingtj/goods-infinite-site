@@ -452,7 +452,7 @@ def build_article(meta, body, slug):
         "author": author_ld,
         "publisher": {"@type": "Organization", "name": "GOODSINFINITE TRADE LIMITED",
                       "url": SITE + "/"},
-        "mainEntityOfPage": SITE + "/insights/" + slug + ".html",
+        "mainEntityOfPage": SITE + "/insights/" + slug,
         "image": SITE + "/assets/images/og-cover.webp",
         "keywords": canon
     }, ensure_ascii=False, indent=2) + '\n</script>')

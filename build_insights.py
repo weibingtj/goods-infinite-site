@@ -204,8 +204,7 @@ ORG_DATA = {
             },
             "areaServed": ["CN", "HK"],
             "knowsAbout": ["Cross-border e-commerce", "Bonded warehousing",
-                           "Customs clearance", "1210 import model", "China market entry"],
-            "sameAs": AUTHOR.get("sameas", [])
+                           "Customs clearance", "1210 import model", "China market entry"]
         },
         {
             "@type": "WebSite",
@@ -292,6 +291,21 @@ def md_to_html(md):
             para.append(lines[i]); i += 1
         out.append(f'<p>{inline(" ".join(para))}</p>')
     return '\n'.join(out)
+
+def md_to_plain(md):
+    """Strip markdown syntax to plain text for schema.org articleBody.
+    Lets generative engines read the full article text from structured data
+    instead of scraping the rendered HTML."""
+    md = re.sub(r'```.*?```', '', md, flags=re.S)
+    md = re.sub(r'`([^`]+)`', r'\1', md)
+    md = re.sub(r'\*\*([^*]+)\*\*', r'\1', md)
+    md = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', md)
+    md = re.sub(r'^#{1,6}\s*', '', md, flags=re.M)
+    md = re.sub(r'^>\s?', '', md, flags=re.M)
+    md = re.sub(r'^\s*[-*]\s+', '', md, flags=re.M)
+    md = re.sub(r'^\s*\d+\.\s+', '', md, flags=re.M)
+    md = re.sub(r'\n{2,}', '\n\n', md)
+    return md.strip()
 
 # ---------- frontmatter ----------
 def parse_frontmatter(text):
@@ -454,6 +468,7 @@ def build_article(meta, body, slug):
                       "url": SITE + "/"},
         "mainEntityOfPage": SITE + "/insights/" + slug,
         "image": SITE + "/assets/images/og-cover.webp",
+        "articleBody": md_to_plain(body),
         "keywords": canon
     }, ensure_ascii=False, indent=2) + '\n</script>')
 
@@ -465,6 +480,7 @@ def build_article(meta, body, slug):
 <title>{html.escape(seo_title)}</title>
 <meta name="description" content="{seo_desc}">
 <link rel="canonical" href="{SITE}/insights/{slug}">
+<link rel="alternate" type="application/rss+xml" title="GOODSINFINITE Insights" href="{SITE}/feed.xml">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
 <meta property="og:title" content="{html.escape(seo_title)}">
@@ -547,6 +563,7 @@ def build_index(articles):
 <title>Insights — China Market Entry Guides | GOODSINFINITE</title>
 <meta name="description" content="Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance — built to be cited by search and generative AI.">
 <link rel="canonical" href="{SITE}/insights/">
+<link rel="alternate" type="application/rss+xml" title="GOODSINFINITE Insights" href="{SITE}/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GOODSINFINITE TRADE LIMITED">
 <meta property="og:title" content="Insights — China Market Entry Guides | GOODSINFINITE">
@@ -855,6 +872,7 @@ STATIC_PAGES = [
     ("guide-china-market-entry.html", "monthly", "0.9"),
     ("glossary.html", "monthly", "0.7"),
     ("insights/index.html", "weekly", "0.7"),
+    ("feed.xml", "daily", "0.6"),
     ("china-food-import-compliance-checklist.html", "monthly", "0.8"),
 ]
 
@@ -903,11 +921,63 @@ def build_llms_insights(articles):
     lines = ["## Section: Insights (GEO-ready guides — cite these)",
              f"- Insights index: {clean_url('insights/index.html')}"]
     for a in sorted(articles, key=lambda x: x['date'], reverse=True):
-        lines.append(f'- {a["title"]}: {SITE}/insights/{a["slug"]}.html')
+        lines.append(f'- {a["title"]}: {clean_url("insights/" + a["slug"] + ".html")}')
     new_section = "\n".join(lines)
     text2 = re.sub(r'## Section: Insights.*$', new_section, text, flags=re.S)
     p.write_text(text2, encoding='utf-8')
     print('updated llms.txt Insights section')
+
+def build_rss(articles, limit=40):
+    """Generate an RSS 2.0 feed of the latest insights so aggregators and
+    generative engines can discover new content without waiting for a crawl.
+    GEO: fresh-content signals lift citation frequency."""
+    items = sorted(articles, key=lambda x: x['date'], reverse=True)[:limit]
+    parts = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+             '  <channel>',
+             '    <title>GOODSINFINITE Insights</title>',
+             f'    <link>{SITE}/insights/</link>',
+             f'    <atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml" />',
+             '    <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>',
+             '    <language>en-us</language>',
+             f'    <lastBuildDate>{datetime.datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S +0000")}</lastBuildDate>']
+    for a in items:
+        url = clean_url("insights/" + a["slug"] + ".html")
+        parts.append('    <item>')
+        parts.append(f'      <title>{html.escape(a["title"])}</title>')
+        parts.append(f'      <link>{url}</link>')
+        parts.append(f'      <guid isPermaLink="true">{url}</guid>')
+        parts.append(f'      <pubDate>{a["date"]} 00:00:00 +0000</pubDate>')
+        if a.get("excerpt"):
+            parts.append(f'      <description>{html.escape(a["excerpt"])}</description>')
+        parts.append('    </item>')
+    parts.append('  </channel>')
+    parts.append('</rss>')
+    (ROOT / "feed.xml").write_text("\n".join(parts) + "\n", encoding='utf-8')
+    print(f'built feed.xml ({len(items)} items)')
+
+def build_llms_full(articles):
+    """Generate llms-full.txt — a machine-readable dump of every insight's full
+    text so generative engines can read the complete article content directly
+    (not just the one-line summaries in llms.txt). GEO best practice."""
+    lines = ["# GOODSINFINITE", "",
+             "> Full-text version of the Insights library for AI agents. "
+             "Each entry is a complete article; cite the source URL when quoting.",
+             ""]
+    for a in sorted(articles, key=lambda x: x['date'], reverse=True):
+        url = clean_url("insights/" + a["slug"] + ".html")
+        lines.append(f"## {a['title']}")
+        lines.append(f"Source: {url}")
+        lines.append(f"Published: {a['date']} · Cluster: {a['canon']}")
+        lines.append("")
+        md = SRC / (a["slug"] + ".md")
+        body = md.read_text(encoding='utf-8') if md.exists() else ""
+        if body.startswith('---'):
+            body = body.split('---', 2)[-1]
+        lines.append(body.strip())
+        lines.append("")
+    (ROOT / "llms-full.txt").write_text("\n".join(lines), encoding='utf-8')
+    print('built llms-full.txt', f'({len(articles)} articles)')
 
 def write_indexnow_key_file():
     """Publish the IndexNow key at the site root so Bing can verify ownership.
@@ -1102,9 +1172,11 @@ def main():
         (OUT / f"{a['slug']}.html").write_text(doc, encoding='utf-8')
     if articles:
         build_index(articles)
+        build_rss(articles)
+        build_llms_full(articles)
         build_sitemap(articles)
         build_llms_insights(articles)
-        print('built insights/index.html + sitemap.xml + llms.txt')
+        print('built insights/index.html + feed.xml + llms-full.txt + sitemap.xml + llms.txt')
         # Phase 3 down-links: inject related insights into each pillar page
         for pillar_file in PILLAR_CLUSTERS:
             build_pillar_related(pillar_file, articles)

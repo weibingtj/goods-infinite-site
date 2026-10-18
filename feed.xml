@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2026 06:55:28 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 19:12:50 +0000</lastBuildDate>
+    <item>
+      <title>Product Recall and SAMR Enforcement in China: What Happens If Your Product Is Non-Compliant</title>
+      <link>https://www.goods-infinite.com/insights/china-product-recall-samr-enforcement</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-product-recall-samr-enforcement</guid>
+      <pubDate>2026-10-19 00:00:00 +0000</pubDate>
+      <description>In China a recall is a statutory duty, not a reputational choice — and for an imported product it usually lands on a party inside China, not on the foreign brand. This guide maps the five parallel recall regimes (consumer goods, motor vehicles, food, drugs, medical devices), who the law deems the &#x27;producer&#x27; in each, the deadlines that start running the moment you learn of a defect, the penalties for refusing to recall, and the 2026 rules that make a mainland service provider the recall-performing entity for cross-border e-commerce.</description>
+    </item>
     <item>
       <title>Cold-Chain Storage in China Bonded Warehouses</title>
       <link>https://www.goods-infinite.com/insights/china-cold-chain-warehousing</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-fmcg-market-size</guid>
       <pubDate>2026-08-28 00:00:00 +0000</pubDate>
       <description>A data-grounded look at the size of China&#x27;s FMCG market, the imported-goods segment that foreign brands can target, and the consumer cohorts driving demand — with the numbers you need to size your entry.</description>
-    </item>
-    <item>
-      <title>How China KOL Agencies Work for Foreign Brands</title>
-      <link>https://www.goods-infinite.com/insights/china-kol-agency</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-kol-agency</guid>
-      <pubDate>2026-08-28 00:00:00 +0000</pubDate>
-      <description>A clear explainer on China KOL agencies: what they do across Xiaohongshu, Douyin and Weibo, the engagement and fee models foreign brands should expect, and how to run a campaign without losing control of your brand.</description>
     </item>
   </channel>
 </rss>

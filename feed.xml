@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Oct 2026 19:12:50 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 03:43:52 +0000</lastBuildDate>
+    <item>
+      <title>China Cross-Border E-Commerce Listings That Convert</title>
+      <link>https://www.goods-infinite.com/insights/china-cross-border-ecommerce-listings</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-cross-border-ecommerce-listings</guid>
+      <pubDate>2026-10-19 00:00:00 +0000</pubDate>
+      <description>In China&#x27;s cross-border retail import model the product page is not marketing copy — it is the legal Chinese label, the risk disclosure the shopper must accept before ordering, and the first and only storefront most foreign brands get. This guide covers what the page must carry under the 2018 cross-border import rules, why a translated listing loses the search, the title and detail-page architecture that converts, the advertising words that trigger enforcement, and how to measure a listing once it is live.</description>
+    </item>
     <item>
       <title>Product Recall and SAMR Enforcement in China: What Happens If Your Product Is Non-Compliant</title>
       <link>https://www.goods-infinite.com/insights/china-product-recall-samr-enforcement</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/sell-on-tmall-global-from-abroad</guid>
       <pubDate>2026-08-31 00:00:00 +0000</pubDate>
       <description>Tmall Global lets an overseas brand open a China storefront without incorporating locally — using a Hong Kong or overseas entity, bonded (1210) or direct-mail fulfillment, and a Tmall Partner to run it. Here is the exact path from abroad.</description>
-    </item>
-    <item>
-      <title>How Big Is the China FMCG Market and Who Buys Imported Goods</title>
-      <link>https://www.goods-infinite.com/insights/china-fmcg-market-size</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-fmcg-market-size</guid>
-      <pubDate>2026-08-28 00:00:00 +0000</pubDate>
-      <description>A data-grounded look at the size of China&#x27;s FMCG market, the imported-goods segment that foreign brands can target, and the consumer cohorts driving demand — with the numbers you need to size your entry.</description>
     </item>
   </channel>
 </rss>

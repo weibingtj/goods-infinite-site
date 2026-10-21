@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2026 03:45:45 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 01:01:24 +0000</lastBuildDate>
+    <item>
+      <title>China PIPL &amp; Data Compliance for Cross-Border E-Commerce: The 2026 Rules for Foreign Brands</title>
+      <link>https://www.goods-infinite.com/insights/china-pipl-data-compliance-cross-border-ecommerce</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-pipl-data-compliance-cross-border-ecommerce</guid>
+      <pubDate>2026-10-21 00:00:00 +0000</pubDate>
+      <description>Selling to Chinese consumers through 1210 bonded or 9610 direct-mail means you are processing Chinese personal information — whether or not you have a Chinese entity. Here is what PIPL actually requires, the three export gateways, the exemption most cross-border sellers can use, and the filings you cannot skip.</description>
+    </item>
     <item>
       <title>China Cross-Border E-Commerce Listings That Convert</title>
       <link>https://www.goods-infinite.com/insights/china-cross-border-ecommerce-listings</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-social-commerce-agency</guid>
       <pubDate>2026-08-31 00:00:00 +0000</pubDate>
       <description>A China social commerce agency blends KOL casting, content, live-streaming and store operations so creator traffic converts inside your Tmall Global or Douyin store. Here is what it does, how it differs from a KOL agency, and when to bring one in.</description>
-    </item>
-    <item>
-      <title>How to Sell on Tmall Global from Abroad Without a China Entity</title>
-      <link>https://www.goods-infinite.com/insights/sell-on-tmall-global-from-abroad</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/sell-on-tmall-global-from-abroad</guid>
-      <pubDate>2026-08-31 00:00:00 +0000</pubDate>
-      <description>Tmall Global lets an overseas brand open a China storefront without incorporating locally — using a Hong Kong or overseas entity, bonded (1210) or direct-mail fulfillment, and a Tmall Partner to run it. Here is the exact path from abroad.</description>
     </item>
   </channel>
 </rss>

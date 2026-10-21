@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 01:01:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 03:42:51 +0000</lastBuildDate>
+    <item>
+      <title>China Market Entry by Region: Where Demand Sits</title>
+      <link>https://www.goods-infinite.com/insights/china-market-entry-regional-demand</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-regional-demand</guid>
+      <pubDate>2026-10-21 00:00:00 +0000</pubDate>
+      <description>Entering the China market for foreign brands is usually planned against one national number, and that number is the least useful figure available: RMB 50.12 trillion of retail sales tells you nothing about which province will buy your product. This guide reads the 2025 customs data on where cross-border imports actually land, separates the Greater Bay Area, the Yangtze Delta and Beijing-Tianjin-Hebei by what each rewards, explains why city-tier rankings and income quintiles answer different questions, and gives a two-week method for choosing the first region and the first bonded port.</description>
+    </item>
     <item>
       <title>China PIPL &amp; Data Compliance for Cross-Border E-Commerce: The 2026 Rules for Foreign Brands</title>
       <link>https://www.goods-infinite.com/insights/china-pipl-data-compliance-cross-border-ecommerce</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-distributor-for-foreign-brands</guid>
       <pubDate>2026-08-31 00:00:00 +0000</pubDate>
       <description>A China distributor puts your product on shelves and platforms across the mainland — but the term covers three very different models. Compare an import agent, a distribution partner, and a local entity to choose the right reach without losing control.</description>
-    </item>
-    <item>
-      <title>China Social Commerce Agency: What It Does and When a Foreign Brand Needs One</title>
-      <link>https://www.goods-infinite.com/insights/china-social-commerce-agency</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-social-commerce-agency</guid>
-      <pubDate>2026-08-31 00:00:00 +0000</pubDate>
-      <description>A China social commerce agency blends KOL casting, content, live-streaming and store operations so creator traffic converts inside your Tmall Global or Douyin store. Here is what it does, how it differs from a KOL agency, and when to bring one in.</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 03:42:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 03:24:07 +0000</lastBuildDate>
+    <item>
+      <title>How to Vet a China Distributor: The Checks, the Red Flags and the Contract Clauses</title>
+      <link>https://www.goods-infinite.com/insights/vet-china-distributor-due-diligence</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/vet-china-distributor-due-diligence</guid>
+      <pubDate>2026-10-23 00:00:00 +0000</pubDate>
+      <description>A Chinese distributor can put your product in front of millions of buyers — or register your trademark before you do, gray-import your own stock back at you, and quietly replace you once the category is proven. Here is the due-diligence sequence that catches the second kind: four free official registries, the first-to-file trademark trap, the clauses Chinese law will and will not enforce for you, and the contract terms that survive a dispute.</description>
+    </item>
     <item>
       <title>China Market Entry by Region: Where Demand Sits</title>
       <link>https://www.goods-infinite.com/insights/china-market-entry-regional-demand</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/tmall-global-tp-partner</guid>
       <pubDate>2026-09-01 00:00:00 +0000</pubDate>
       <description>A Tmall Global TP partner is an Alibaba-certified operator that runs your flagship store day to day — listings, customer service, promotions and data. Here is what a TP does, how the fee models work, how to vet one, and when a foreign brand should hire one instead of building an in-house China team.</description>
-    </item>
-    <item>
-      <title>Finding a China Distributor for Foreign Brands: Agent, Partner, or Local Entity</title>
-      <link>https://www.goods-infinite.com/insights/china-distributor-for-foreign-brands</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-distributor-for-foreign-brands</guid>
-      <pubDate>2026-08-31 00:00:00 +0000</pubDate>
-      <description>A China distributor puts your product on shelves and platforms across the mainland — but the term covers three very different models. Compare an import agent, a distribution partner, and a local entity to choose the right reach without losing control.</description>
     </item>
   </channel>
 </rss>

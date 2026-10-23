@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2026 03:24:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 03:43:03 +0000</lastBuildDate>
+    <item>
+      <title>Cross-Border E-Commerce Stock Planning in China</title>
+      <link>https://www.goods-infinite.com/insights/cross-border-ecommerce-stock-planning-china</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/cross-border-ecommerce-stock-planning-china</guid>
+      <pubDate>2026-10-23 00:00:00 +0000</pubDate>
+      <description>Replenishing a 1210 bonded position is not ordinary inventory planning, because three customs clocks run against every unit you hold: the one-year bonded storage limit, the 60-day destruction window for stock that cannot be sold, and the 30/45-day return window that puts units back into available inventory. This guide sets out how to size a first bonded position against the RMB 5,000 per-order and RMB 26,000 per-person quotas, why the tax deferral makes bonded stock cheaper to hold than general-trade stock, which customs filings bound the plan, and the five metrics a monthly replenishment review should track.</description>
+    </item>
     <item>
       <title>How to Vet a China Distributor: The Checks, the Red Flags and the Contract Clauses</title>
       <link>https://www.goods-infinite.com/insights/vet-china-distributor-due-diligence</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-food-beverage</guid>
       <pubDate>2026-09-01 00:00:00 +0000</pubDate>
       <description>A month-by-month roadmap for entering the China market as a foreign food or beverage brand — GACC facility registration, Chinese labelling, channel choice between cross-border and general trade, and the sequence that gets you selling in under a quarter.</description>
-    </item>
-    <item>
-      <title>Tmall Global TP Partner: How Foreign Brands Choose a Tmall Partner (TP) Operator</title>
-      <link>https://www.goods-infinite.com/insights/tmall-global-tp-partner</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/tmall-global-tp-partner</guid>
-      <pubDate>2026-09-01 00:00:00 +0000</pubDate>
-      <description>A Tmall Global TP partner is an Alibaba-certified operator that runs your flagship store day to day — listings, customer service, promotions and data. Here is what a TP does, how the fee models work, how to vet one, and when a foreign brand should hire one instead of building an in-house China team.</description>
     </item>
   </channel>
 </rss>

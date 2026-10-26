@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2026 03:43:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 02:13:01 +0000</lastBuildDate>
+    <item>
+      <title>Importing Chemicals Into China: MEE Registration, Hazardous Chemical Rules and What &#x27;China REACH&#x27; Actually Requires</title>
+      <link>https://www.goods-infinite.com/insights/importing-chemicals-to-china-mee-reach</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/importing-chemicals-to-china-mee-reach</guid>
+      <pubDate>2026-10-26 00:00:00 +0000</pubDate>
+      <description>There is no single &#x27;China REACH&#x27; certificate. Importing a chemical into China runs four or five parallel approval tracks — MEE new-substance registration, hazardous chemical registration, customs inspection, toxic chemical release, precursor licensing — and each one has its own clock, its own applicant rules and its own penalty.</description>
+    </item>
     <item>
       <title>Cross-Border E-Commerce Stock Planning in China</title>
       <link>https://www.goods-infinite.com/insights/cross-border-ecommerce-stock-planning-china</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-health-food-registration-blue-hat</guid>
       <pubDate>2026-09-01 00:00:00 +0000</pubDate>
       <description>Selling supplements in China turns on one question: do you need a &#x27;blue hat&#x27; health food approval, or can you enter as ordinary food or through cross-border e-commerce? This guide separates the registration route from the filing route, names the regulator, and gives the realistic timelines.</description>
-    </item>
-    <item>
-      <title>China Market Entry Roadmap for Food and Beverage Brands: A 12-Month Plan</title>
-      <link>https://www.goods-infinite.com/insights/china-market-entry-roadmap-food-beverage</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-food-beverage</guid>
-      <pubDate>2026-09-01 00:00:00 +0000</pubDate>
-      <description>A month-by-month roadmap for entering the China market as a foreign food or beverage brand — GACC facility registration, Chinese labelling, channel choice between cross-border and general trade, and the sequence that gets you selling in under a quarter.</description>
     </item>
   </channel>
 </rss>

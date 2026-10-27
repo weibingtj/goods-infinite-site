@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2026 03:44:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 19:06:55 +0000</lastBuildDate>
+    <item>
+      <title>Supplements in China: &#x27;Blue Hat&#x27; Health Food vs General Food — Which Route Does Your Product Take?</title>
+      <link>https://www.goods-infinite.com/insights/supplements-blue-hat-vs-general-food</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/supplements-blue-hat-vs-general-food</guid>
+      <pubDate>2026-10-28 00:00:00 +0000</pubDate>
+      <description>China has no legal category called &#x27;supplement&#x27;. A vitamins bottle, a fish-oil softgel and a collagen sachet can each be regulated as health food (&#x27;blue hat&#x27;), as ordinary food, or as a cross-border retail import — with three different approval clocks, three different claim limits and three different distribution rights. This guide gives you the decision tree and the statutory citations.</description>
+    </item>
     <item>
       <title>China Cross-Border E-Commerce Customer Service SLAs</title>
       <link>https://www.goods-infinite.com/insights/china-cross-border-ecommerce-customer-service</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-beauty-brands</guid>
       <pubDate>2026-09-02 00:00:00 +0000</pubDate>
       <description>A category-specific roadmap for foreign beauty and personal-care brands entering China: NMPA cosmetic registration under CSAR, Chinese labelling, the cross-border-first sequence, and the Xiaohongshu-to-Tmall path that actually converts.</description>
-    </item>
-    <item>
-      <title>China Medical Device Registration for Foreign Brands: NMPA Class I–III Pathways</title>
-      <link>https://www.goods-infinite.com/insights/china-medical-device-registration</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-medical-device-registration</guid>
-      <pubDate>2026-09-02 00:00:00 +0000</pubDate>
-      <description>A practical map of how foreign medical device manufacturers register and file with China&#x27;s NMPA: the three-class risk system, who must lodge the application, when clinical evaluation is required, realistic timelines, and how an importer of record closes the China gap.</description>
     </item>
   </channel>
 </rss>

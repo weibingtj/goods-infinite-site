@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2026 19:06:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 03:50:44 +0000</lastBuildDate>
+    <item>
+      <title>China Market Entry: Test Before You Commit</title>
+      <link>https://www.goods-infinite.com/insights/china-market-entry-test-before-commit</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-test-before-commit</guid>
+      <pubDate>2026-10-28 00:00:00 +0000</pubDate>
+      <description>A China market entry pilot is a bounded, reversible commercial test that lets a foreign brand sell real product to real Chinese buyers before registering anything: a cross-border storefront that skips first-import licensing, a bonded pallet whose unsold units carry no duty, a distributor trial in one province, each with a defined spend cap and a graduation trigger. This guide sets out the legal line between testing and selling, the commitment ladder from demand test to general trade, and the five signals that tell you the pilot has done its job.</description>
+    </item>
     <item>
       <title>Supplements in China: &#x27;Blue Hat&#x27; Health Food vs General Food — Which Route Does Your Product Take?</title>
       <link>https://www.goods-infinite.com/insights/supplements-blue-hat-vs-general-food</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-research-foreign-brands</guid>
       <pubDate>2026-09-04 00:00:00 +0000</pubDate>
       <description>A practical research playbook for foreign brands entering China: which official data sources to trust, how to read platform signals, how to test price points without shipping a container, and the go/no-go evidence that should precede any distribution or WFOE decision.</description>
-    </item>
-    <item>
-      <title>China Market Entry Roadmap for Beauty Brands: From Research to Tmall Launch</title>
-      <link>https://www.goods-infinite.com/insights/china-market-entry-roadmap-beauty-brands</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-beauty-brands</guid>
-      <pubDate>2026-09-02 00:00:00 +0000</pubDate>
-      <description>A category-specific roadmap for foreign beauty and personal-care brands entering China: NMPA cosmetic registration under CSAR, Chinese labelling, the cross-border-first sequence, and the Xiaohongshu-to-Tmall path that actually converts.</description>
     </item>
   </channel>
 </rss>

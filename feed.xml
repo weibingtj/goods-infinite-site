@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 03:50:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 19:18:29 +0000</lastBuildDate>
+    <item>
+      <title>China Bonded Zone vs Bonded Warehouse: Duty Rules</title>
+      <link>https://www.goods-infinite.com/insights/china-bonded-zone-vs-bonded-warehouse</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-bonded-zone-vs-bonded-warehouse</guid>
+      <pubDate>2026-10-30 00:00:00 +0000</pubDate>
+      <description>A bonded zone and a bonded warehouse are both ways to hold imported stock inside China without paying import duty first — but they sit under three different customs decrees, they run on different storage clocks, and only two of them can legally host 1210 cross-border e-commerce stock. This guide gives you the decision rules and the statutory citations.</description>
+    </item>
     <item>
       <title>China Market Entry: Test Before You Commit</title>
       <link>https://www.goods-infinite.com/insights/china-market-entry-test-before-commit</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-livestream-agency-foreign-brands</guid>
       <pubDate>2026-09-04 00:00:00 +0000</pubDate>
       <description>How foreign brands hire and work with China livestream agencies: the three operating models (MCN-managed, self-broadcast build-up, creator commissions), typical fee structures, the compliance duties your agency must already follow, and the contract terms that protect your GMV data.</description>
-    </item>
-    <item>
-      <title>China Market Research for Foreign Brands: How to Validate Demand Before You Commit</title>
-      <link>https://www.goods-infinite.com/insights/china-market-research-foreign-brands</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-research-foreign-brands</guid>
-      <pubDate>2026-09-04 00:00:00 +0000</pubDate>
-      <description>A practical research playbook for foreign brands entering China: which official data sources to trust, how to read platform signals, how to test price points without shipping a container, and the go/no-go evidence that should precede any distribution or WFOE decision.</description>
     </item>
   </channel>
 </rss>

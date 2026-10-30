@@ -6,13 +6,20 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 19:26:37 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 03:50:24 +0000</lastBuildDate>
     <item>
       <title>China Bonded Zone vs Bonded Warehouse: Duty Rules</title>
       <link>https://www.goods-infinite.com/insights/china-bonded-zone-vs-bonded-warehouse</link>
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-bonded-zone-vs-bonded-warehouse</guid>
       <pubDate>2026-10-30 00:00:00 +0000</pubDate>
       <description>A bonded zone and a bonded warehouse are both ways to hold imported stock inside China without paying import duty first — but they sit under three different customs decrees, they run on different storage clocks, and only two of them can legally host 1210 cross-border e-commerce stock. This guide gives you the decision rules and the statutory citations.</description>
+    </item>
+    <item>
+      <title>China Import Freight: Sea vs Rail vs Air for Brands</title>
+      <link>https://www.goods-infinite.com/insights/china-import-freight-sea-rail-air</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-import-freight-sea-rail-air</guid>
+      <pubDate>2026-10-30 00:00:00 +0000</pubDate>
+      <description>China import freight is a mode decision before it is a rate decision: ocean moves the bulk of bonded stock into five container ports, the China-Europe rail network gives European-origin goods a mid-speed middle option, and air freight is a surgical tool for launches and stockouts. This guide compares the three modes with 2025 official capacity data and turns them into a decision ladder.</description>
     </item>
     <item>
       <title>China Market Entry: Test Before You Commit</title>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-pet-brands</guid>
       <pubDate>2026-09-07 00:00:00 +0000</pubDate>
       <description>A category-specific China market entry roadmap for foreign pet food, supplement and pet-care brands: the GACC and MARA registration gates, the general-trade versus 1210 question, tariffs, and the channels where imported pet products actually sell.</description>
-    </item>
-    <item>
-      <title>China Livestream Agency for Foreign Brands: How to Hire a Douyin Live-Commerce Operator</title>
-      <link>https://www.goods-infinite.com/insights/china-livestream-agency-foreign-brands</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-livestream-agency-foreign-brands</guid>
-      <pubDate>2026-09-04 00:00:00 +0000</pubDate>
-      <description>How foreign brands hire and work with China livestream agencies: the three operating models (MCN-managed, self-broadcast build-up, creator commissions), typical fee structures, the compliance duties your agency must already follow, and the contract terms that protect your GMV data.</description>
     </item>
   </channel>
 </rss>

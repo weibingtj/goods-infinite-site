@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2026 03:50:24 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 19:09:14 +0000</lastBuildDate>
+    <item>
+      <title>China Rules of Origin &amp; FTA Preferential Duty: How to Claim Agreement Tariff Rates</title>
+      <link>https://www.goods-infinite.com/insights/china-rules-of-origin-fta-preferential-duty</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-rules-of-origin-fta-preferential-duty</guid>
+      <pubDate>2026-11-02 00:00:00 +0000</pubDate>
+      <description>Rules of origin decide which of China&#x27;s four import duty rates your goods actually pay. Non-preferential origin and FTA preferential origin run on two different legal instruments, use different tests, and only one of them can move your landed cost by double digits. This guide sets out the Tariff Law framework, the two rulebooks, the RCEP and 2026 Africa zero-tariff specifics, the bonded-zone trap that silently forfeits agreement rates, and how to lock your origin position in writing before you ship.</description>
+    </item>
     <item>
       <title>China Bonded Zone vs Bonded Warehouse: Duty Rules</title>
       <link>https://www.goods-infinite.com/insights/china-bonded-zone-vs-bonded-warehouse</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-fashion-apparel</guid>
       <pubDate>2026-09-09 00:00:00 +0000</pubDate>
       <description>A category-specific China market entry roadmap for foreign fashion and apparel brands: the cross-border e-commerce versus general-trade decision that sets your price, the GB 18401 and GB 31701 safety standards that gate your shipment, the 3–6 month timeline, and where imported clothing actually sells.</description>
-    </item>
-    <item>
-      <title>China Pet Market Entry Roadmap for Foreign Brands: Registration, Channels and Timing</title>
-      <link>https://www.goods-infinite.com/insights/china-market-entry-roadmap-pet-brands</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-pet-brands</guid>
-      <pubDate>2026-09-07 00:00:00 +0000</pubDate>
-      <description>A category-specific China market entry roadmap for foreign pet food, supplement and pet-care brands: the GACC and MARA registration gates, the general-trade versus 1210 question, tariffs, and the channels where imported pet products actually sell.</description>
     </item>
   </channel>
 </rss>

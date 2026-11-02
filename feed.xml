@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 19:09:14 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 03:46:21 +0000</lastBuildDate>
+    <item>
+      <title>China Pricing Strategy for Foreign Brands</title>
+      <link>https://www.goods-infinite.com/insights/china-pricing-strategy-foreign-brands</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-pricing-strategy-foreign-brands</guid>
+      <pubDate>2026-11-02 00:00:00 +0000</pubDate>
+      <description>A China price is not a converted price. It has to clear three constraints at once — the landed-cost floor of the route you ship on, the channel ladder between you and the buyer, and two regulatory price cliffs that change the tax treatment of the whole order. This guide sets out the method: compute the floor, map the ladder, design around the cliffs, display prices compliantly, and validate with a bonded pilot before you commit.</description>
+    </item>
     <item>
       <title>China Rules of Origin &amp; FTA Preferential Duty: How to Claim Agreement Tariff Rates</title>
       <link>https://www.goods-infinite.com/insights/china-rules-of-origin-fta-preferential-duty</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-import-taxes-landed-cost</guid>
       <pubDate>2026-09-11 00:00:00 +0000</pubDate>
       <description>China import tax is three separate charges — customs duty, import VAT and consumption tax — and the route you choose changes the bill more than the headline rate does. This walkthrough gives the formulas, the 2026 rate structure, the RMB 5,000 / 26,000 cross-border cap, and a side-by-side landed-cost model for the same product on two routes.</description>
-    </item>
-    <item>
-      <title>China Market Entry Roadmap for Fashion &amp; Apparel Brands: Channels, Compliance and Timing</title>
-      <link>https://www.goods-infinite.com/insights/china-market-entry-roadmap-fashion-apparel</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-roadmap-fashion-apparel</guid>
-      <pubDate>2026-09-09 00:00:00 +0000</pubDate>
-      <description>A category-specific China market entry roadmap for foreign fashion and apparel brands: the cross-border e-commerce versus general-trade decision that sets your price, the GB 18401 and GB 31701 safety standards that gate your shipment, the 3–6 month timeline, and where imported clothing actually sells.</description>
     </item>
   </channel>
 </rss>

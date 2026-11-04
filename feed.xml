@@ -6,13 +6,20 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2026 01:12:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 03:43:33 +0000</lastBuildDate>
     <item>
       <title>China Consumer Protection for Imported Goods: The 7-Day Return, After-Sales Duties and the Cross-Border Exception</title>
       <link>https://www.goods-infinite.com/insights/china-consumer-protection-imported-goods</link>
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-consumer-protection-imported-goods</guid>
       <pubDate>2026-11-04 00:00:00 +0000</pubDate>
       <description>China has no single &#x27;return policy&#x27; for imported goods. Three separate legal routes apply — a quality-defect return, a 7-day no-reason return, and a customs-supervised cross-border return — and the 2024 implementing regulation plus two 2026 platform rules add duties that land on whoever sells to a Chinese consumer. This guide maps the rules, the deadlines, the penalties and who carries liability when the brand has no mainland entity.</description>
+    </item>
+    <item>
+      <title>China Market Entry for Silver Economy Brands</title>
+      <link>https://www.goods-infinite.com/insights/china-market-entry-silver-economy</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-silver-economy</guid>
+      <pubDate>2026-11-04 00:00:00 +0000</pubDate>
+      <description>China adds roughly ten million people to its 60-plus population every year while every other consumer pool stands still. This guide sizes the silver economy, identifies who actually pays, shows where the imported assortment is genuinely thin, and routes products across the three regulatory tracks that decide whether they can be sold at all — plus the bonded lane that lets a brand test the market before registering.</description>
     </item>
     <item>
       <title>China Pricing Strategy for Foreign Brands</title>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-hs-code-classification-importers</guid>
       <pubDate>2026-09-16 00:00:00 +0000</pubDate>
       <description>China commodity classification is the 10-digit code that decides your duty rate, your consumption-tax exposure, which licences apply and how customs audits you. This guide explains the legal framework behind the HS code, why classification is where imports go wrong, and how advance rulings, administrative rulings and classification decisions turn a guess into a binding answer before you ship.</description>
-    </item>
-    <item>
-      <title>Double 11 and 618 for Foreign Brands: A Campaign Calendar for Cross-Border Stores</title>
-      <link>https://www.goods-infinite.com/insights/double-11-618-campaign-calendar-foreign-brands</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/double-11-618-campaign-calendar-foreign-brands</guid>
-      <pubDate>2026-09-14 00:00:00 +0000</pubDate>
-      <description>Double 11 and 618 are the two demand peaks that decide whether a foreign brand&#x27;s cross-border store in China grows or stalls. This calendar walks through what each festival now is, the working-backwards preparation timeline — from bonded-warehouse stocking to KOL seeding — and the operational differences a 1210 cross-border store must handle that domestic stores never see.</description>
     </item>
   </channel>
 </rss>

@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Nov 2026 03:46:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 01:06:12 +0000</lastBuildDate>
+    <item>
+      <title>China Consumer Protection for Imported Goods: The 7-Day Return, After-Sales Duties and the Cross-Border Exception</title>
+      <link>https://www.goods-infinite.com/insights/china-consumer-protection-imported-goods</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-consumer-protection-imported-goods</guid>
+      <pubDate>2026-11-04 00:00:00 +0000</pubDate>
+      <description>China has no single &#x27;return policy&#x27; for imported goods. Three separate legal routes apply — a quality-defect return, a 7-day no-reason return, and a customs-supervised cross-border return — and the 2024 implementing regulation plus two 2026 platform rules add duties that land on whoever sells to a Chinese consumer. This guide maps the rules, the deadlines, the penalties and who carries liability when the brand has no mainland entity.</description>
+    </item>
     <item>
       <title>China Pricing Strategy for Foreign Brands</title>
       <link>https://www.goods-infinite.com/insights/china-pricing-strategy-foreign-brands</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/double-11-618-campaign-calendar-foreign-brands</guid>
       <pubDate>2026-09-14 00:00:00 +0000</pubDate>
       <description>Double 11 and 618 are the two demand peaks that decide whether a foreign brand&#x27;s cross-border store in China grows or stalls. This calendar walks through what each festival now is, the working-backwards preparation timeline — from bonded-warehouse stocking to KOL seeding — and the operational differences a 1210 cross-border store must handle that domestic stores never see.</description>
-    </item>
-    <item>
-      <title>China Import Taxes and Duties Explained: A Landed-Cost Walkthrough for Foreign Brands</title>
-      <link>https://www.goods-infinite.com/insights/china-import-taxes-landed-cost</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-import-taxes-landed-cost</guid>
-      <pubDate>2026-09-11 00:00:00 +0000</pubDate>
-      <description>China import tax is three separate charges — customs duty, import VAT and consumption tax — and the route you choose changes the bill more than the headline rate does. This walkthrough gives the formulas, the 2026 rate structure, the RMB 5,000 / 26,000 cross-border cap, and a side-by-side landed-cost model for the same product on two routes.</description>
     </item>
   </channel>
 </rss>

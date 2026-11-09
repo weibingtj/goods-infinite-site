@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Nov 2026 03:44:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 01:26:46 +0000</lastBuildDate>
+    <item>
+      <title>China Tariff Rate Quotas: In-Quota vs Out-of-Quota Duty, 2026 Volumes and Who Can Hold a Quota</title>
+      <link>https://www.goods-infinite.com/insights/china-tariff-rate-quota-in-quota-out-of-quota</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-tariff-rate-quota-in-quota-out-of-quota</guid>
+      <pubDate>2026-11-09 00:00:00 +0000</pubDate>
+      <description>A Chinese tariff rate quota is not an import ban — it is two duty rates attached to the same customs line, and which one you pay depends on a certificate your overseas company cannot hold. This guide sets out the eight quota categories for 2026, the actual in-quota and out-of-quota rates, the auction-free allocation rules, the cotton sliding-duty formula, and the bonded-warehouse trap that catches importers who assume storage defers the quota.</description>
+    </item>
     <item>
       <title>China Consumer Protection for Imported Goods: The 7-Day Return, After-Sales Duties and the Cross-Border Exception</title>
       <link>https://www.goods-infinite.com/insights/china-consumer-protection-imported-goods</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-offline-retail-channels</guid>
       <pubDate>2026-09-18 00:00:00 +0000</pubDate>
       <description>Physical stores still take roughly three quarters of China&#x27;s RMB 50.1 trillion retail market, but the winning formats changed — convenience chains grew 5.5% in 2025 while department stores were flat. This guide maps the six offline channels an imported brand can actually reach, explains why cross-border e-commerce goods cannot legally sit on a shelf, and sets out the listing pack, payment-term rules and fee protections a foreign brand should hold a retailer to.</description>
-    </item>
-    <item>
-      <title>China HS Code Classification for Importers: How Your Tariff Line Is Set — and Made Binding</title>
-      <link>https://www.goods-infinite.com/insights/china-hs-code-classification-importers</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-hs-code-classification-importers</guid>
-      <pubDate>2026-09-16 00:00:00 +0000</pubDate>
-      <description>China commodity classification is the 10-digit code that decides your duty rate, your consumption-tax exposure, which licences apply and how customs audits you. This guide explains the legal framework behind the HS code, why classification is where imports go wrong, and how advance rulings, administrative rulings and classification decisions turn a guess into a binding answer before you ship.</description>
     </item>
   </channel>
 </rss>

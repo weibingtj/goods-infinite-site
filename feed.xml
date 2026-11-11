@@ -6,13 +6,20 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 01:14:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 03:48:56 +0000</lastBuildDate>
     <item>
       <title>China Customs Duty Guarantees: How to Release Goods Before the Tax Is Settled</title>
       <link>https://www.goods-infinite.com/insights/china-customs-duty-guarantee</link>
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-customs-duty-guarantee</guid>
       <pubDate>2026-11-11 00:00:00 +0000</pubDate>
       <description>A Chinese customs duty guarantee is not a tax prepayment — it is a promise that lets a shipment clear before the duty is final, and since December 2021 one enterprise-level instrument covers consolidated tax payment, payment-term and valuation-classification-origin guarantees across every port in the country. This guide sets out the legal ladder (Customs Law Art. 66, State Council Decree 581, Tariff Law Art. 43, GACC Order 272), the three accepted instruments, the 5-working-day and 6-month clocks, the situations where no guarantee is allowed at all, and why a brand selling through 1210 bonded cross-border retail normally posts no customs guarantee of its own.</description>
+    </item>
+    <item>
+      <title>China Mega-Promo Enrollment for Cross-Border Stores</title>
+      <link>https://www.goods-infinite.com/insights/china-mega-promo-enrollment-cross-border-stores</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-mega-promo-enrollment-cross-border-stores</guid>
+      <pubDate>2026-11-11 00:00:00 +0000</pubDate>
+      <description>Mega-promo enrollment is the transaction behind every Double 11 and 618 badge: a store commits to category-minimum discounts, a month of price protection and tighter shipping clocks in exchange for official traffic. This guide walks through the 2025 Tmall rules — eligibility checks, the merchant-funded official direct discount, the lowest-price validation window, the price-lock obligation and what changes for a 1210 bonded store.</description>
     </item>
     <item>
       <title>China Tariff Rate Quotas: In-Quota vs Out-of-Quota Duty, 2026 Volumes and Who Can Hold a Quota</title>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-aeo-certification-importer-of-record</guid>
       <pubDate>2026-09-21 00:00:00 +0000</pubDate>
       <description>China&#x27;s customs credit system was rewritten on 1 April 2026 — five tiers instead of three, with AEO status now split between advanced certified and certified enterprises. This is why the rating of your China importer of record, not your own brand, decides how often your goods are inspected, how much cash sits in guarantees, and how fast a container reaches the warehouse.</description>
-    </item>
-    <item>
-      <title>Importing Into China Without a Local Company: The Importer-of-Record Path</title>
-      <link>https://www.goods-infinite.com/insights/importing-into-china-without-a-local-company</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/importing-into-china-without-a-local-company</guid>
-      <pubDate>2026-09-21 00:00:00 +0000</pubDate>
-      <description>You do not need a mainland WFOE to start selling in China. But you do need a licensed importer of record. Here is the legal baseline, the four structures that work without a local entity, and how a Hong Kong trading arm fits in.</description>
     </item>
   </channel>
 </rss>

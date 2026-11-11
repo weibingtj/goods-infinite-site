@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2026 07:58:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 01:12:59 +0000</lastBuildDate>
+    <item>
+      <title>China Customs Duty Guarantees: How to Release Goods Before the Tax Is Settled</title>
+      <link>https://www.goods-infinite.com/insights/china-customs-duty-guarantee</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-customs-duty-guarantee</guid>
+      <pubDate>2026-11-11 00:00:00 +0000</pubDate>
+      <description>A Chinese customs duty guarantee is not a tax prepayment — it is a promise that lets a shipment clear before the duty is final, and since December 2021 one enterprise-level instrument covers consolidated tax payment, payment-term and valuation-classification-origin guarantees across every port in the country. This guide sets out the legal ladder (Customs Law Art. 66, State Council Decree 581, Tariff Law Art. 43, GACC Order 272), the three accepted instruments, the 5-working-day and 6-month clocks, the situations where no guarantee is allowed at all, and why a brand selling through 1210 bonded cross-border retail normally posts no customs guarantee of its own.</description>
+    </item>
     <item>
       <title>China Tariff Rate Quotas: In-Quota vs Out-of-Quota Duty, 2026 Volumes and Who Can Hold a Quota</title>
       <link>https://www.goods-infinite.com/insights/china-tariff-rate-quota-in-quota-out-of-quota</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/importing-into-china-without-a-local-company</guid>
       <pubDate>2026-09-21 00:00:00 +0000</pubDate>
       <description>You do not need a mainland WFOE to start selling in China. But you do need a licensed importer of record. Here is the legal baseline, the four structures that work without a local entity, and how a Hong Kong trading arm fits in.</description>
-    </item>
-    <item>
-      <title>Which Chinese Agency Regulates My Product? A Map for Importers</title>
-      <link>https://www.goods-infinite.com/insights/which-chinese-agency-regulates-my-product</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/which-chinese-agency-regulates-my-product</guid>
-      <pubDate>2026-09-21 00:00:00 +0000</pubDate>
-      <description>Before you ship, you need to know which Chinese authority owns your product&#x27;s approval. This map shows the seven agencies that matter, who checks at the border versus in the market, and a three-step way to find the right one for your category.</description>
     </item>
   </channel>
 </rss>

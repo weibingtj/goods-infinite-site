@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 03:48:56 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 19:03:26 +0000</lastBuildDate>
+    <item>
+      <title>Processing Trade in China: Manual vs Account Book, Unit Consumption and the Domestic-Sale Bill</title>
+      <link>https://www.goods-infinite.com/insights/china-processing-trade-manual-vs-account-book</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-processing-trade-manual-vs-account-book</guid>
+      <pubDate>2026-11-13 00:00:00 +0000</pubDate>
+      <description>Processing trade (加工贸易) is the one Chinese customs regime where imported materials are never dutiable on the way in — provided the finished goods leave again. That proviso is enforced through a bonded ledger: either a contract-based manual or an enterprise-based account book, both of which live or die on the unit-consumption figure the factory declares. This guide sets out the legal definition (GACC Order 219, Arts. 3 and 42), what a manual and an account book actually are, how unit consumption is declared and capped (Order 155), the valuation and interest rules that apply when goods are sold inside China instead of exported (Tariff Law Art. 36; Order 211 as amended by Order 273), the quarterly consolidated domestic-sale window, and the guarantee that came back on 1 January 2026 for restricted-category goods.</description>
+    </item>
     <item>
       <title>China Customs Duty Guarantees: How to Release Goods Before the Tax Is Settled</title>
       <link>https://www.goods-infinite.com/insights/china-customs-duty-guarantee</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-cost-budget</guid>
       <pubDate>2026-09-23 00:00:00 +0000</pubDate>
       <description>China&#x27;s own registration fees are trivial — a trademark costs RMB 270 a class and imported-food facility registration costs nothing at all — yet brands still spend six figures getting in. This guide breaks the entry budget into its six layers, gives the official fee and the 2026 market benchmark for each, and sets out where the money is genuinely unavoidable.</description>
-    </item>
-    <item>
-      <title>AEO Certification in China: What Your Importer of Record&#x27;s Customs Credit Rating Means</title>
-      <link>https://www.goods-infinite.com/insights/china-aeo-certification-importer-of-record</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-aeo-certification-importer-of-record</guid>
-      <pubDate>2026-09-21 00:00:00 +0000</pubDate>
-      <description>China&#x27;s customs credit system was rewritten on 1 April 2026 — five tiers instead of three, with AEO status now split between advanced certified and certified enterprises. This is why the rating of your China importer of record, not your own brand, decides how often your goods are inspected, how much cash sits in guarantees, and how fast a container reaches the warehouse.</description>
     </item>
   </channel>
 </rss>

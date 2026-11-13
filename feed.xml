@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2026 19:05:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 03:48:23 +0000</lastBuildDate>
+    <item>
+      <title>China Consumption Downgrade vs Premiumization (2026)</title>
+      <link>https://www.goods-infinite.com/insights/china-consumption-downgrade-vs-premiumization</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-consumption-downgrade-vs-premiumization</guid>
+      <pubDate>2026-11-13 00:00:00 +0000</pubDate>
+      <description>Is China trading down or still premiumizing? The honest 2025 data says both, in the same year and often the same household. This guide reads the retail-format, income and import numbers behind the debate, shows which shelves are shrinking and which are compounding, and translates the two-speed consumer into a concrete price-position decision for foreign brands entering the market.</description>
+    </item>
     <item>
       <title>Processing Trade in China: Manual vs Account Book, Unit Consumption and the Domestic-Sale Bill</title>
       <link>https://www.goods-infinite.com/insights/china-processing-trade-manual-vs-account-book</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-distribution-margin-by-channel</guid>
       <pubDate>2026-09-25 00:00:00 +0000</pubDate>
       <description>Before your product reaches a Chinese shopper, a distribution stack of importers, sub-distributors, retailers or platforms takes its share — roughly 20 percent for a distributor, 25 to 40 percent for the retailer in general trade, or a 2 to 5 percent platform commission plus heavy marketing spend in cross-border e-commerce. This guide maps each channel&#x27;s margin and shows how to keep yours.</description>
-    </item>
-    <item>
-      <title>China Market Entry Costs: What a Foreign Brand Actually Budgets, Line by Line</title>
-      <link>https://www.goods-infinite.com/insights/china-market-entry-cost-budget</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-cost-budget</guid>
-      <pubDate>2026-09-23 00:00:00 +0000</pubDate>
-      <description>China&#x27;s own registration fees are trivial — a trademark costs RMB 270 a class and imported-food facility registration costs nothing at all — yet brands still spend six figures getting in. This guide breaks the entry budget into its six layers, gives the official fee and the 2026 market benchmark for each, and sets out where the money is genuinely unavoidable.</description>
     </item>
   </channel>
 </rss>

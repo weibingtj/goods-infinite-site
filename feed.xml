@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Nov 2026 03:48:23 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 19:07:46 +0000</lastBuildDate>
+    <item>
+      <title>China Cross-Border E-Commerce Positive List: The 1,476 Tax Codes That Decide What You Can Sell</title>
+      <link>https://www.goods-infinite.com/insights/china-cross-border-ecommerce-positive-list</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-cross-border-ecommerce-positive-list</guid>
+      <pubDate>2026-11-16 00:00:00 +0000</pubDate>
+      <description>The Cross-Border E-Commerce Retail Import Commodity List — the &#x27;positive list&#x27; — is the single gate that decides whether your product can enter China through 1210 bonded or 9610 direct-purchase channels. This guide sets out the legal basis (Notice 486 of 2018), the four versions of the list from 1,240 to 1,476 tax codes, the tax mechanics that ride on it (5,000/26,000 yuan limits, 0% duty, VAT at 70%), and the remark-level restrictions — 98 items bonded-only, quantity caps, endangered-species proof — that catch brands who checked only the tariff code.</description>
+    </item>
     <item>
       <title>China Consumption Downgrade vs Premiumization (2026)</title>
       <link>https://www.goods-infinite.com/insights/china-consumption-downgrade-vs-premiumization</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-cross-border-ecommerce-returns</guid>
       <pubDate>2026-09-28 00:00:00 +0000</pubDate>
       <description>A cross-border return in China is two processes running on two clocks: a consumer-law refund governed by market regulators and a customs re-entry governed by GACC. This guide sets out the 30-day and 45-day customs windows, the seven-day consumer window that Tmall Global tightened in September 2026, the legal exit for unsellable bonded stock, and the four mistakes that turn a return into a liability.</description>
-    </item>
-    <item>
-      <title>China Distribution Margins: What Distributors, Retailers and Platforms Take Before Your Brand Sees Revenue</title>
-      <link>https://www.goods-infinite.com/insights/china-distribution-margin-by-channel</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-distribution-margin-by-channel</guid>
-      <pubDate>2026-09-25 00:00:00 +0000</pubDate>
-      <description>Before your product reaches a Chinese shopper, a distribution stack of importers, sub-distributors, retailers or platforms takes its share — roughly 20 percent for a distributor, 25 to 40 percent for the retailer in general trade, or a 2 to 5 percent platform commission plus heavy marketing spend in cross-border e-commerce. This guide maps each channel&#x27;s margin and shows how to keep yours.</description>
     </item>
   </channel>
 </rss>

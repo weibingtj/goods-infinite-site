@@ -2,6 +2,130 @@
 
 > Full-text version of the Insights library for AI agents. Each entry is a complete article; cite the source URL when quoting.
 
+## Bonded Repair in China: 'Two Ends Outside' Maintenance, the 1371 Code and Who Can Actually Do It
+Source: https://www.goods-infinite.com/insights/china-bonded-repair-two-ends-outside
+Published: 2026-11-18 · Cluster: Logistics & Distribution
+
+## Bonded repair in China is a re-export obligation disguised as a service
+
+The question foreign equipment brands actually ask is narrower than "can I repair goods in China". It is: *if my product fails in the field, can I send it to China, have it fixed, and send it back without paying import duty twice or surrendering it to Chinese customs?* The answer is yes — through bonded repair (保税维修) — but the regime is a tightly administered re-export instrument, and most of its rules are about where the goods and their replaced parts end up.
+
+[GACC Announcement No. 203 of 2018](https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5447554.htm), effective 1 January 2019, defines the regime for enterprises operating **outside** special customs supervision areas: a company brings goods or transport vehicles with damaged components, functional failure or quality defects (待维修货物) into China from overseas under bond, tests and repairs them, and re-exports them. Article 2 permits only business allowed by law or approved by the State Council and relevant departments, and expressly forbids using bonded repair for goods whose import or export is prohibited, or for dismantling and scrapping.
+
+Inside special customs supervision areas the legal basis is different. [GACC Announcement No. 59 of 2015](https://kab.sww.sh.gov.cn/gzzt/002008/002008003/20151215/782a32e7-5c04-419c-b110-8c15560ed8fe.html) governs bonded repair in bonded zones, export processing zones, bonded logistics parks, bonded port areas, comprehensive bonded zones and several other named areas, and Article 10 was [amended by GACC Announcement No. 105 of 2023](http://www.customs.gov.cn/customs/fileDir/resource/cms/article/302267/5337702/2023090809043587034.pdf), effective from publication. Commercial access inside comprehensive bonded zones is then governed by a series of joint MOFCOM–MEE–GACC announcements, the latest of which is No. 82 of 2025.
+
+The dividing line matters more than it looks. Outside a zone, Announcement 203 offers a general route for lawful goods, subject to case acceptance and on-site verification. Inside a comprehensive bonded zone, access is mediated through product catalogs and a zone-level supervision scheme. Between the two sit the pilot free-trade-zone and "other region" programmes, which are approval-based rather than automatic.
+
+<div class="statcard"><span class="n">1371 · 5 · 30 days</span><span class="l">The three identifiers and clocks that run a bonded repair file: supervision code 1371 (保税维修), bonded method 5, and a write-off report due within 30 days after the account-book cycle ends. A zone-outside book runs at most one year; a comprehensive-bonded-zone book at most two</span><span class="src">Source: GACC Announcement 2018 No. 203, Arts. 6–7; GACC Announcement 2015 No. 59; customs bonded-repair service guide</span></div>
+
+## Who may hold the account book — and what the foreign brand must sign
+
+Announcement 203 makes the Chinese enterprise the centre of gravity. Article 3 requires the applicant to have a customs credit standing at or above the general level, the premises and equipment to segregate goods to be repaired, repaired goods, irreparable goods, repair materials, replaced old or broken parts and scraps, a management system and computer system capable of tracking repair consumption throughout, and to pass an on-site customs verification. Article 4 then requires three documents: a description of the repair business, the repair contract with the overseas party, and **an authorisation document from the brand owner or its agent**. Announcement 203 also requires the account-book items not to be entered in the processing-trade prohibited-goods catalog.
+
+For a foreign brand this is the pivotal point. The brand can authorise and contract, but it cannot hold the bonded repair account book or act as the operator of record. The Chinese counterparty's credit standing, systems and premises are what customs assesses, and the brand's authorisation letter is the instrument that lets that counterparty lawfully handle the brand's goods. Our guide to [importing into China without a local company](https://www.goods-infinite.com/insights/importing-into-china-without-a-local-company.html) explains the broader importer-of-record problem; bonded repair is one of the scenarios where a Chinese operating entity is structurally unavoidable.
+
+The operational distinction that practitioners care about is the supervision code. Announcement 203 requires the account-book header to carry "bonded repair (1371)" as the supervision method and "bonded repair (5)" as the bonded method, with finished goods filed as "goods name (repaired)" and "goods name (unrepairable)". That contrasts with the general "goods for repair" code 1300 used for ordinary temporary-import repairs. [Local customs guidance](http://www.lda.gov.cn/lygjjjskfq/bmdt/content/0f3107dd-2f3e-4c9d-8024-ad5194e28fd9.html) notes that the 1371 route does not require a deposit and is associated with faster clearance and lower inspection rates than 1300 — the trade-off being the account book, the approval and the full-tracking discipline.
+
+<div class="statcard"><span class="n">55 → ~70 → 97 → fourth batch</span><span class="l">The comprehensive bonded zone repair catalog has expanded in four steps: 55 categories in 2020, about 70 after the 2021 supplementary list, 97 after the third batch in 2024, and a fourth batch in December 2025 covering communications base stations, railway locomotives, yachts and automotive power batteries</span><span class="src">Source: MOFCOM–MEE–GACC Announcements 2020 No. 16, 2021 No. 45, 2024 No. 7 and 2025 No. 82</span></div>
+
+## The four catalog batches — and what the 2025 announcement changed
+
+Access to comprehensive bonded zone repair is defined by catalogs, and the catalogs have moved quickly. [Announcement No. 16 of 2020](https://www.mofcom.gov.cn/zcfb/blgg/art/2020/art_47dde896b098474495a521365bc9b5b3.html), effective on publication, opened 55 categories — aerospace, ships, rail transit, engineering machinery, CNC machine tools, communications equipment and precision electronics — to global repair from overseas or from inside China but outside the zone (境内区外). It also removed the previous case-by-case approval by central ministries: the zone authority, together with local commerce and customs authorities, now determines the supervision scheme and files it with provincial commerce authorities and the direct customs house.
+
+Announcement No. 45 of 2021 added a supplementary catalog, bringing the product range to roughly 70 categories including drones and VR glasses. [Announcement No. 7 of 2024](https://m.cqn.com.cn/qt/content/2024-03/14/content_9036313.htm), effective 29 February 2024, added 27 categories — aircraft engine nacelles, vehicle gearboxes, projectors among them — taking the total to about 97. It also introduced two flexibilities that matter commercially: a group may repair its own products sold domestically and return them to China without being restricted by the repair catalog, and domestic goods within the catalog may enter a comprehensive bonded zone for repair and then be exported directly.
+
+The most recent step is [MOFCOM–MEE–GACC Announcement No. 82 of 2025](https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2026/art_8051214953a64b86a5e014ce782d05ae.html), published and effective 16 December 2025. It adds a fourth batch covering communications base stations, railway locomotives, yachts and automotive power batteries. More importantly, it expressly permits a zone enterprise to carry out "two ends outside" (两头在外) bonded repair on **electromechanical products its own group manufactured domestically and exported**, without being restricted by the zone repair catalog or by the catalog prohibiting import of used mechanical and electrical products. It also permits repair of products the group manufactured anywhere in the world and sold in China, with the repaired goods returned to China or exported directly. Its final clause states that where earlier announcements conflict, No. 82 prevails; the 2020, 2021 and 2024 announcements otherwise continue to apply.
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Instrument</th><th>Effect from</th><th>What it opened</th></tr></thead>
+<tbody>
+<tr><td><strong>GACC Ann. 203 of 2018</strong></td><td>1 Jan 2019</td><td>General bonded repair route outside special customs supervision areas; account book, 1371 code, three filing documents</td></tr>
+<tr><td><strong>GACC Ann. 59 of 2015, Art. 10 amended by Ann. 105 of 2023</strong></td><td>2015; amendment effective from publication in 2023</td><td>Customs supervision of bonded repair inside named special customs supervision areas, including scrap and replaced-part disposal</td></tr>
+<tr><td><strong>MOFCOM–MEE–GACC Ann. 16 of 2020</strong></td><td>On publication</td><td>First comprehensive bonded zone catalog: 55 categories; global repair from overseas or 境内区外; zone-level scheme replaces central case approval</td></tr>
+<tr><td><strong>Ann. 45 of 2021</strong></td><td>On publication</td><td>Supplementary catalog; product range to about 70 categories</td></tr>
+<tr><td><strong>Ann. 7 of 2024</strong></td><td>29 Feb 2024</td><td>Third batch of 27 categories; total about 97; group's own domestically sold products and catalog goods from domestic sources</td></tr>
+<tr><td><strong>Ann. 82 of 2025</strong></td><td>16 Dec 2025</td><td>Fourth batch; "two ends outside" for group's own exported electromechanical products; prevails where earlier announcements conflict</td></tr>
+</tbody></table></div>
+
+## "Two ends outside" is a customs-flow test, not a marketing label
+
+The phrase is easy to misuse. In the official instruments it describes a specific flow: goods come from outside China's customs territory, are repaired inside a zone or pilot area, and leave again. The [three ministries' notice 商办贸函〔2025〕276号 of 26 March 2025](https://wms.mofcom.gov.cn/zcfb/wmzc/art/2025/art_67e1ea72473e42f4ad18f09885bc5586.html) sets the principle plainly — repaired goods must be re-exported and may not enter domestic sale or use except where rules provide otherwise. The same notice supports advanced-certified enterprises in pilot free-trade zones doing "two ends outside" repair of large equipment such as aircraft, ships and tunnel-boring machines, subject to a product catalog, brand-owner authorisation, relevant civil-aviation repair licences for aircraft, and a provincial-government-led supervision scheme.
+
+That notice also carries the policy lineage. It cites the [ten-department Opinion on Raising the Level of Processing Trade (Shang Mao Fa 2023 No. 308)](https://www.gov.cn/zhengce/zhengceku/202312/content_6923425.htm), whose Article 3 calls for "two ends outside" pilots for self-produced medical-device and electronic-information exports outside comprehensive bonded zones and pilot FTZs, followed by non-self-produced products in aerospace, ships, engineering machinery and electronics, and names Suzhou, Dongguan and Tianjin Binhai New Area as pilot locations. The 2025 notice adds that outside comprehensive bonded zones and FTZs, bonded repair proceeds **as a pilot only**, on the basis of a provincial multi-department supervision scheme submitted to MOFCOM. There is therefore no unconditional nationwide right to open a bonded repair operation outside a zone.
+
+## Scraps and replaced parts are where the regime bites
+
+The commercial logic of bonded repair assumes the repaired unit goes back. The harder question is what happens to what comes off it. The answer is deliberately restrictive.
+
+[GACC Announcement No. 105 of 2023](http://www.customs.gov.cn/customs/fileDir/resource/cms/article/302267/5337702/2023090809043587034.pdf), amending Article 10 of Announcement No. 59 of 2015, requires repair scraps, broken parts and old parts in principle to be re-exported under the supervision codes for re-export of processing-trade scraps; where they genuinely cannot be re-exported, they may not be sold domestically and must be destroyed under the processing-trade destruction rules. Scraps from goods that entered the zone from inside China may be returned to the domestic area by gate registration. Solid waste is managed under the domestic solid-waste regime.
+
+The joint 2025 notice tightens this further: solid waste may not be imported under the guise of bonded repair, dismantling and scrapping may not be conducted in its name, and enterprises must keep a solid-waste ledger, file the required information through the national solid-waste management system, and control VOC content in coatings, adhesives and cleaning agents. It also provides for a "broken-part rate" control indicator, regular project assessment, and a rectification period during which the enterprise may not conduct bonded repair and its zone or FTZ area suspends new bonded repair projects. For context on how China treats defective and non-compliant goods more broadly, see our [guide to product recall and SAMR enforcement](https://www.goods-infinite.com/insights/china-product-recall-samr-enforcement.html).
+
+A bonded repair centre is a physical operation, not a filing exercise. The China-side infrastructure that makes this kind of bonded service work is the same that supports our bonded import and fulfilment clients: a double-eleven peak of 540,000 orders in a single day, 6,000 m² of bonded warehouse space, 8,000 m² of temperature- and humidity-controlled capacity, 170 classic vehicles in bonded custody, more than 300 client companies served, and our own AEO advanced certification backed by 15 partner AEO enterprises. That is the operating base behind the customs regime described here.
+
+<div class="statcard"><span class="n">540,000 · 6,000 m² · 8,000 m² · 300+</span><span class="l">Double-eleven peak of 540,000 orders in a single day, 6,000 m² of bonded warehousing, 8,000 m² of temperature- and humidity-controlled space, 170 bonded classic vehicles, 300+ client companies, and our own AEO advanced certification plus 15 partner AEOs</span><span class="src">Source: GOODSINFINITE operating data</span></div>
+
+## What this means for a foreign equipment brand
+
+Three practical consequences follow from the structure above.
+
+First, **choose the route by where the goods and the operator sit.** A repair centre inside a comprehensive bonded zone works within the catalog system and the zone's supervision scheme; a repair operation outside a zone relies on Announcement 203 and case acceptance; an outside-zone "two ends outside" project for non-self-produced goods is a pilot requiring provincial and central approval. These are not interchangeable, and the guarantee treatment that applies to [other bonded operations](https://www.goods-infinite.com/insights/china-customs-duty-guarantee.html) should not be assumed to transfer. The distinction between a zone and a plain bonded warehouse is set out in [bonded zone vs bonded warehouse](https://www.goods-infinite.com/insights/china-bonded-zone-vs-bonded-warehouse.html).
+
+Second, **the customs advantage is deferral conditioned on re-export, not a tax holiday.** Bonded repair avoids duty because the goods leave, not because repair is a favoured activity. The underlying tariff principle — bonded goods re-exported are free of duty, bonded goods converted to domestic sale are dutiable — is the same one that governs [processing trade](https://www.goods-infinite.com/insights/china-processing-trade-manual-vs-account-book.html) and is stated at statute level in Article 36 of the Tariff Law. Any plan that quietly redirects repaired units or replaced parts into domestic channels breaks the regime.
+
+Third, **the authorisation is a real control point.** A Chinese repair enterprise cannot lawfully handle a brand's goods under the dedicated account book without the brand owner's or agent's authorisation document. For brands concerned about grey-market service, counterfeit parts or warranty integrity, that document — plus the operator's credit standing and tracking system — is the lever that decides who may repair the product in China and under what controls.
+
+## What we deliberately do not assert
+
+- We do not give a breakdown of the full product catalogs by tariff code. The catalogs are published as attachments and change by announcement; the categories named here are those stated in the announcements themselves.
+- We do not state a fee for establishing a bonded repair account book or a fixed total processing time. These depend on the file, the zone and the on-site verification.
+- We do not assert that bonded repair is available to a foreign company acting directly. The account book holder is a customs-registered Chinese enterprise; the overseas brand authorises and contracts.
+- We do not attach a specific "broken-part rate" threshold. The 2025 notice directs enterprises and regulators to set the indicator in the project scheme, and no universal figure is published.
+- We do not treat the 1371 route as free of all security. The absence of a deposit is a clearance feature; the account book, approval, segregation and write-off obligations remain.
+- We do not quote a current list of approved pilot projects or zones beyond the areas named in the cited instruments. Project lists are maintained by the authorities and change over time.
+
+## FAQ
+
+**What is bonded repair in China, in legal terms?** GACC Announcement No. 203 of 2018 defines it as bringing goods or transport vehicles with damaged components, functional failure or quality defects into China from overseas under bond, testing and repairing them, and re-exporting them. The defining obligation is re-export. Announcement 203 governs outside special customs supervision areas; inside comprehensive bonded zones, Announcement 59 of 2015 as amended and the joint catalog announcements apply.
+
+**Can repaired goods be sold in China?** Generally no. "Two ends outside" means the goods arrive from overseas and leave again. The notice 商办贸函〔2025〕276号 requires repaired goods to be re-exported and bars domestic sale or use unless a specific rule permits it. Scraps, old and broken parts and irreparable goods follow the same rule: re-export or destroy, not domestic sale.
+
+**Can a foreign brand do bonded repair without a Chinese company?** No. The dedicated account book is held by a customs-registered Chinese enterprise that passes the on-site verification and carries the customs liability. Announcement 203 requires a repair contract and an authorisation from the brand owner or its agent; the brand authorises and contracts but does not hold the book.
+
+**What is the difference between 1371 and 1300?** 1371 is the dedicated bonded repair supervision code required by Announcement 203, with bonded method 5 and a dedicated account book. 1300 is the general "goods for repair" temporary-import code. Customs guidance notes the 1371 route requires no deposit and is associated with faster clearance and lower inspection rates, in exchange for the account-book and approval obligations.
+
+**Which products are in the comprehensive bonded zone repair catalog?** Four batches apply cumulatively: 55 categories in 2020 (Announcement 16), about 70 after 2021 (Announcement 45), 97 after the 2024 third batch (Announcement 7), and a fourth batch in Announcement 82 of 2025 covering communications base stations, railway locomotives, yachts and automotive power batteries. Where announcements conflict, No. 82 prevails.
+
+**What is the 'two ends outside' route for a group's own products?** Announcement 82 of 2025 lets a zone enterprise repair electromechanical products its own group made domestically and exported, free of the zone catalog and the used-machinery import prohibition, and also repair products the group made globally and sold in China, returning them to China or exporting them. The 2025 three-ministry notice separately supports FTZ advanced-certified enterprises doing large-equipment "two ends outside" repair.
+
+## Sources
+
+1. [GACC Announcement No. 203 of 2018 on bonded repair supervision](https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5447554.htm) — definition, enterprise conditions, filing documents, account book and 1371 code (Arts. 1–7)
+2. [GACC Announcement No. 59 of 2015 on bonded repair in special customs supervision areas](https://kab.sww.sh.gov.cn/gzzt/002008/002008003/20151215/782a32e7-5c04-419c-b110-8c15560ed8fe.html) — scope, areas and supervision requirements
+3. [GACC Announcement No. 105 of 2023 amending Article 10 of Announcement No. 59 of 2015](http://www.customs.gov.cn/customs/fileDir/resource/cms/article/302267/5337702/2023090809043587034.pdf) — scraps, broken parts and old parts: re-export or destroy, no domestic sale
+4. [MOFCOM–MEE–GACC Announcement No. 16 of 2020 on comprehensive bonded zone repair](https://www.mofcom.gov.cn/zcfb/blgg/art/2020/art_47dde896b098474495a521365bc9b5b3.html) — first catalog of 55 categories, global repair, zone-level scheme, waste duties
+5. [MOFCOM–MEE–GACC Announcement No. 7 of 2024, third catalog](https://m.cqn.com.cn/qt/content/2024-03/14/content_9036313.htm) — 27 categories, total about 97; group's own domestically sold products and catalog goods from domestic sources
+6. [MOFCOM–MEE–GACC Announcement No. 82 of 2025](https://www.mofcom.gov.cn/zcfb/zgdwjjmywg/art/2026/art_8051214953a64b86a5e014ce782d05ae.html) — fourth catalog batch and "two ends outside" route, effective 16 December 2025
+7. [MOFCOM–MEE–GACC notice 商办贸函〔2025〕276号 on bonded repair](https://wms.mofcom.gov.cn/zcfb/wmzc/art/2025/art_67e1ea72473e42f4ad18f09885bc5586.html) — 26 March 2025; product flow, pilot structure, full-chain supervision and waste controls
+8. [Ten-department Opinion on Raising the Level of Processing Trade (Shang Mao Fa 2023 No. 308)](https://www.gov.cn/zhengce/zhengceku/202312/content_6923425.htm) — Article 3, "two ends outside" pilots and named pilot locations
+9. [China Customs: guide to comprehensive bonded zone bonded repair](http://chinacustoms.gmcmonline.com/202406/c/19820.shtml) — catalog history and official definition of zone bonded repair
+10. [Lianyungang Economic and Technological Development Zone: comprehensive bonded zone bonded repair overview](http://www.lda.gov.cn/lygjjjskfq/bmdt/content/0f3107dd-2f3e-4c9d-8024-ad5194e28fd9.html) — 1371 versus 1300 comparison and catalog progression
+
+## Related reading
+
+- [China bonded zone vs bonded warehouse: duty rules](https://www.goods-infinite.com/insights/china-bonded-zone-vs-bonded-warehouse.html)
+- [Processing trade in China: manual vs account book](https://www.goods-infinite.com/insights/china-processing-trade-manual-vs-account-book.html)
+- [China customs duty guarantees](https://www.goods-infinite.com/insights/china-customs-duty-guarantee.html)
+- [Importing into China without a local company](https://www.goods-infinite.com/insights/importing-into-china-without-a-local-company.html)
+- [China AEO certification and the importer of record](https://www.goods-infinite.com/insights/china-aeo-certification-importer-of-record.html)
+- [Product recall and SAMR enforcement in China](https://www.goods-infinite.com/insights/china-product-recall-samr-enforcement.html)
+- [What 1210 bonded import is](https://www.goods-infinite.com/insights/what-is-1210-bonded-import.html)
+- [China customs clearance process](https://www.goods-infinite.com/insights/china-customs-clearance-process.html)
+- [Bonded warehouse cost and process](https://www.goods-infinite.com/insights/bonded-warehouse-cost-process.html)
+
+*Bing Wei · 18 November 2026*
+
 ## Baidu Search Marketing for Foreign Brands in China
 Source: https://www.goods-infinite.com/insights/baidu-search-marketing-foreign-brands-china
 Published: 2026-11-16 · Cluster: Marketing & New Media

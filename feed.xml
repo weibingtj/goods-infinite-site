@@ -6,13 +6,20 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2026 01:15:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 03:45:11 +0000</lastBuildDate>
     <item>
       <title>Bonded Repair in China: &#x27;Two Ends Outside&#x27; Maintenance, the 1371 Code and Who Can Actually Do It</title>
       <link>https://www.goods-infinite.com/insights/china-bonded-repair-two-ends-outside</link>
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-bonded-repair-two-ends-outside</guid>
       <pubDate>2026-11-18 00:00:00 +0000</pubDate>
       <description>Bonded repair (保税维修) is the customs regime under which defective goods or transport vehicles are brought into China from overseas under bond, tested and repaired, and then re-exported without import duty. This guide sets out the legal definition (GACC Announcement 2018 No. 203), the two-track structure — outside special customs supervision areas under Announcement 203 and inside comprehensive bonded zones under Announcement 2015 No. 59 as amended by Announcement 2023 No. 105 — the four product-catalog batches culminating in the 2025 No. 82 announcement of 16 December 2025, the &#x27;two ends outside&#x27; route for a group&#x27;s own exported products, the 1371 versus 1300 distinction, the mandatory re-export of scraps and replaced parts, and the written authorisation a foreign brand must give before a Chinese enterprise may repair its goods.</description>
+    </item>
+    <item>
+      <title>China WFOE Registered Capital: How Much to Pay In</title>
+      <link>https://www.goods-infinite.com/insights/china-wfoe-registered-capital</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-wfoe-registered-capital</guid>
+      <pubDate>2026-11-18 00:00:00 +0000</pubDate>
+      <description>Registered capital for a China WFOE is no longer a figure you copy from a template. Since 1 July 2024 it is a dated commitment with a five-year statutory clock, an acceleration trigger if the company cannot pay its debts, and a cap on how much the parent can lend in. This guide sets out the three clocks that govern the number, how the money must actually arrive, and how to size it for a first-entry import entity.</description>
     </item>
     <item>
       <title>Baidu Search Marketing for Foreign Brands in China</title>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/cross-border-ecommerce-store-economics-china</guid>
       <pubDate>2026-10-02 00:00:00 +0000</pubDate>
       <description>Commission is 2 to 5 percent and cross-border import tax about 9.1 percent — but the cost that decides whether a Tmall Global or Douyin store makes money is demand creation. This guide sets the breakeven ROAS from the fixed cost lines up, and shows where RMB 100 of cross-border GMV actually goes.</description>
-    </item>
-    <item>
-      <title>China Customs Valuation: How Royalties, Assists and Related-Party Prices Set Your Import Tax Base</title>
-      <link>https://www.goods-infinite.com/insights/china-customs-valuation-royalties</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-customs-valuation-royalties</guid>
-      <pubDate>2026-09-30 00:00:00 +0000</pubDate>
-      <description>China customs valuation decides the number that import duty, import VAT and consumption tax are charged on — and it is frequently higher than the price on the invoice. This guide explains the additions and deductions that adjust the tax base, the two tests that make a royalty dutiable, how a special relationship shifts the burden of proof onto the importer, the 30-day royalty declaration clock, and why voluntary disclosure is usually the cheapest way out of a past under-declaration.</description>
     </item>
   </channel>
 </rss>

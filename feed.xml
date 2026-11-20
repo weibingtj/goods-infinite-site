@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2026 03:45:47 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 03:45:03 +0000</lastBuildDate>
+    <item>
+      <title>Franchising in China: Rules for Foreign Brands</title>
+      <link>https://www.goods-infinite.com/insights/franchising-in-china-foreign-brands</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/franchising-in-china-foreign-brands</guid>
+      <pubDate>2026-11-20 00:00:00 +0000</pubDate>
+      <description>Franchising in China is not a licensing shortcut. The franchisor must be a Chinese enterprise that has already traded two direct-operated stores for more than a year before it may sell a single franchise, and the Supreme People&#x27;s Court confirmed in August 2026 that contracts signed by unqualified franchisors do not hold. This guide sets out the two-store gate, the 15-day filing, the 30-day disclosure file, the statutory cooling-off right and the three routes a foreign brand can actually take.</description>
+    </item>
     <item>
       <title>Bonded Repair in China: &#x27;Two Ends Outside&#x27; Maintenance, the 1371 Code and Who Can Actually Do It</title>
       <link>https://www.goods-infinite.com/insights/china-bonded-repair-two-ends-outside</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-cosmetics-2025-2026-reforms</guid>
       <pubDate>2026-10-02 00:00:00 +0000</pubDate>
       <description>China&#x27;s cosmetics rules shifted in 2025–2026. NMPA&#x27;s Opinion and Announcement 2026 No. 70 let international new products launch in China first, expanded animal-testing waivers, and cut filing burden. Here is what an overseas beauty brand must know.</description>
-    </item>
-    <item>
-      <title>Cross-Border E-Commerce in China: Tmall Global Costs</title>
-      <link>https://www.goods-infinite.com/insights/cross-border-ecommerce-store-economics-china</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/cross-border-ecommerce-store-economics-china</guid>
-      <pubDate>2026-10-02 00:00:00 +0000</pubDate>
-      <description>Commission is 2 to 5 percent and cross-border import tax about 9.1 percent — but the cost that decides whether a Tmall Global or Douyin store makes money is demand creation. This guide sets the breakeven ROAS from the fixed cost lines up, and shows where RMB 100 of cross-border GMV actually goes.</description>
     </item>
   </channel>
 </rss>

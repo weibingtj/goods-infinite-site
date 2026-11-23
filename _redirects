@@ -15,3 +15,35 @@
 # /author-bing.html is 301'd to /author/bing-wei/ so indexed/linked versions
 # pass equity to the new profile (GEO anchor: Bing Wei = GOODSINFINITE).
 /author-bing.html  /author/bing-wei/  301
+
+# GSC "Http 400-499" report (2026-11-23): legacy /insights/<root-page>.html
+# URLs that were moved to root-level clean URLs during the site restructure.
+# GSC surfaced glossary + guide-china-market-entry first; cover all 12 root
+# pages (both .html and extensionless variants) so no sibling 404 is left.
+# NOTE: these are /insights/... -> /... (cross-path), NOT the forbidden
+# extensionless -> .html reverse rule, so no redirect loop is introduced.
+# Verify no root page name collides with a real insight slug before extending.
+/insights/about.html  /about  301
+/insights/about  /about  301
+/insights/bonded-warehouse-customs.html  /bonded-warehouse-customs  301
+/insights/bonded-warehouse-customs  /bonded-warehouse-customs  301
+/insights/case-studies.html  /case-studies  301
+/insights/case-studies  /case-studies  301
+/insights/china-food-import-compliance-checklist.html  /china-food-import-compliance-checklist  301
+/insights/china-food-import-compliance-checklist  /china-food-import-compliance-checklist  301
+/insights/china-marketing.html  /china-marketing  301
+/insights/china-marketing  /china-marketing  301
+/insights/contact.html  /contact  301
+/insights/contact  /contact  301
+/insights/ecommerce-operations.html  /ecommerce-operations  301
+/insights/ecommerce-operations  /ecommerce-operations  301
+/insights/enter-china.html  /enter-china  301
+/insights/enter-china  /enter-china  301
+/insights/glossary.html  /glossary  301
+/insights/glossary  /glossary  301
+/insights/guide-china-market-entry.html  /guide-china-market-entry  301
+/insights/guide-china-market-entry  /guide-china-market-entry  301
+/insights/pricing.html  /pricing  301
+/insights/pricing  /pricing  301
+/insights/source-from-china.html  /source-from-china  301
+/insights/source-from-china  /source-from-china  301

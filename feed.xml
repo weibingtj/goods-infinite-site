@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 03:47:17 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 03:49:54 +0000</lastBuildDate>
+    <item>
+      <title>WFOE Exit: Liquidation and Deregistration in China</title>
+      <link>https://www.goods-infinite.com/insights/wfoe-exit-liquidation-deregistration-china</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/wfoe-exit-liquidation-deregistration-china</guid>
+      <pubDate>2026-11-25 00:00:00 +0000</pubDate>
+      <description>Closing a Chinese WFOE is one liquidation and a queue of deregistrations, not a cancellation letter. The 2023 Company Law makes directors personally the cleanup obligors, fixes the creditor clocks at 10, 60 and 45 days, and pays out capital through a waterfall that clears wages and tax before shareholders see anything. This guide sets out the full exit sequence — dissolution, liquidation, tax, customs and final deregistration — and what happens if you simply walk away.</description>
+    </item>
     <item>
       <title>Franchising in China: Rules for Foreign Brands</title>
       <link>https://www.goods-infinite.com/insights/franchising-in-china-foreign-brands</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/how-long-does-customs-clearance-take-china</guid>
       <pubDate>2026-10-05 00:00:00 +0000</pubDate>
       <description>There is no single fixed number for China customs clearance time — it depends on your declaration mode, whether goods are inspected, and your AEO status. Here are the official benchmarks and the mechanisms that actually move the clock.</description>
-    </item>
-    <item>
-      <title>China Cosmetics Reforms 2025–2026: China-First Launch, Animal-Testing Waivers &amp; Filing Relief</title>
-      <link>https://www.goods-infinite.com/insights/china-cosmetics-2025-2026-reforms</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-cosmetics-2025-2026-reforms</guid>
-      <pubDate>2026-10-02 00:00:00 +0000</pubDate>
-      <description>China&#x27;s cosmetics rules shifted in 2025–2026. NMPA&#x27;s Opinion and Announcement 2026 No. 70 let international new products launch in China first, expanded animal-testing waivers, and cut filing burden. Here is what an overseas beauty brand must know.</description>
     </item>
   </channel>
 </rss>

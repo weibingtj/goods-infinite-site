@@ -6,7 +6,14 @@
     <atom:link href="https://www.goods-infinite.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Structured, source-clear guides on entering the China market, 1210 bonded import, import agents and compliance.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Nov 2026 03:49:54 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 03:43:48 +0000</lastBuildDate>
+    <item>
+      <title>China Market Entry: What Import Data Really Shows</title>
+      <link>https://www.goods-infinite.com/insights/china-market-entry-import-data</link>
+      <guid isPermaLink="true">https://www.goods-infinite.com/insights/china-market-entry-import-data</guid>
+      <pubDate>2026-11-27 00:00:00 +0000</pubDate>
+      <description>China publishes its import record monthly, by eight-digit code and origin country, for free — and it is the only market-size figure in the country that no agency has an incentive to inflate. This guide shows how to read it before commissioning research: the 8,972-line tariff problem, why cross-border e-commerce is 3.1% of the import bill rather than the market, why import value is not retail value, and a four-week sizing sequence that produces a go/no-go range first.</description>
+    </item>
     <item>
       <title>WFOE Exit: Liquidation and Deregistration in China</title>
       <link>https://www.goods-infinite.com/insights/wfoe-exit-liquidation-deregistration-china</link>
@@ -279,13 +286,6 @@
       <guid isPermaLink="true">https://www.goods-infinite.com/insights/bilibili-marketing-foreign-brands-china</guid>
       <pubDate>2026-10-05 00:00:00 +0000</pubDate>
       <description>Bilibili is where China&#x27;s urban under-35 consumers spend nearly two hours a day, and where advertising revenue is growing at 28% a year. This guide explains who is on the platform, how the Huahuo creator marketplace and Boost amplification product work, what Chinese advertising law requires of a creator campaign, and how content links to a compliant cross-border checkout.</description>
-    </item>
-    <item>
-      <title>How Long Does Customs Clearance Take in China? (2026 Timelines)</title>
-      <link>https://www.goods-infinite.com/insights/how-long-does-customs-clearance-take-china</link>
-      <guid isPermaLink="true">https://www.goods-infinite.com/insights/how-long-does-customs-clearance-take-china</guid>
-      <pubDate>2026-10-05 00:00:00 +0000</pubDate>
-      <description>There is no single fixed number for China customs clearance time — it depends on your declaration mode, whether goods are inspected, and your AEO status. Here are the official benchmarks and the mechanisms that actually move the clock.</description>
     </item>
   </channel>
 </rss>
